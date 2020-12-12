@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from "react";
 
 const API_KEY="94da30484bb9daa3c3aa4b131328d680";
-const api_url=`http://api.openweathermap.org/data/2.5/forecast?q=Krasnoyarsk&appid=${API_KEY}&units=metric`;
+const api_url=`http://api.openweathermap.org/data/2.5/forecast?q=Kodinsk&appid=${API_KEY}&units=metric`;
 
-class Krasnoyarsk extends React.Component {
+class Kodinsk extends React.Component {
 
     state = {
         city: undefined,
@@ -191,4 +191,4 @@ class Krasnoyarsk extends React.Component {
     }
 }
 
-export default Krasnoyarsk;
+export default Kodinsk;

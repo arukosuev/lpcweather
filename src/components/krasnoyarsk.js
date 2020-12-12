@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component, Fragment} from "react";
 
 const API_KEY="94da30484bb9daa3c3aa4b131328d680";
 const api_url=`http://api.openweathermap.org/data/2.5/forecast?q=Krasnoyarsk&appid=${API_KEY}&units=metric`;
@@ -34,14 +34,13 @@ class Krasnoyarsk extends React.Component {
         dirwind5: undefined,
     }
 
-    gettingWeather = async (e) => {  //async - страница не перезагружается
-        e.preventDefault();
+    gettingWeather = async () => {  //async - страница не перезагружается
         const response = await fetch(api_url); // шаблон строки указываем, а не прямой адрес, кавычки косые
         const data = await response.json();
 
 
         /*Создаем массив со всеми значениями осадков*/
-        var array = [];
+        let array = [];
         function rainDay(start,end) {
             for (var i = start; i <= end; i++) {
 
@@ -144,14 +143,14 @@ class Krasnoyarsk extends React.Component {
         });
     }
 
+    componentDidMount() {
+        this.gettingWeather();
+    }
+
     render() {
+
         return (
-            <div>
-                <div>
-                    <form onSubmit={this.gettingWeather}>
-                        <button>Получить погоду</button>
-                    </form>
-                </div>
+            <Fragment>
 
                 <div className="days">
                     <p>Город: {this.state.city}</p>
@@ -187,7 +186,7 @@ class Krasnoyarsk extends React.Component {
                         <p>Ветер: {this.state.wind5}, {this.state.dirwind5}</p>
                     </div>
                 </div>
-            </div>
+            </Fragment>
         );
     }
 }
