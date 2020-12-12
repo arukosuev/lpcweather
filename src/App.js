@@ -10,7 +10,7 @@ class App extends React.Component { //наследует
             <div>
                 <Header />
                 <City owmCity="Vanavara" />
-                <City owmCity="London" />
+                <City owmCity="Saint Petersburg" />
                 <City owmCity="Krasnoyarsk" />
                 <City owmCity="Kodinsk" />
             </div>
