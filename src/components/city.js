@@ -1,9 +1,7 @@
 import React, {Component, Fragment} from "react";
+import { API_KEY } from "../configs/apiKeys";
 
-const API_KEY="94da30484bb9daa3c3aa4b131328d680";
-const api_url=`http://api.openweathermap.org/data/2.5/forecast?q=Krasnoyarsk&appid=${API_KEY}&units=metric`;
-
-class Krasnoyarsk extends React.Component {
+class City extends React.Component {
 
     state = {
         city: undefined,
@@ -34,15 +32,14 @@ class Krasnoyarsk extends React.Component {
         dirwind5: undefined,
     }
 
-    gettingWeather = async () => {  //async - страница не перезагружается
-        const response = await fetch(api_url); // шаблон строки указываем, а не прямой адрес, кавычки косые
+    gettingWeather = async (props) => {  //async - страница не перезагружается
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`); // шаблон строки указываем, а не прямой адрес, кавычки косые
         const data = await response.json();
-
 
         /*Создаем массив со всеми значениями осадков*/
         let array = [];
         function rainDay(start,end) {
-            for (var i = start; i <= end; i++) {
+            for (let i = start; i <= end; i++) {
 
                 try {
                     array[i-start] = data.list[i].rain['3h'];
@@ -52,10 +49,9 @@ class Krasnoyarsk extends React.Component {
             }
         }
 
-
         /*сумма элементов "осадков" массива */
         function summ() {
-            var sum = 0;
+            let sum = 0;
             for(let i = 0; i < array.length; i++){
                 sum += array[i];
             }
@@ -158,31 +154,31 @@ class Krasnoyarsk extends React.Component {
                     <div className="day">
                         <p>Сегодня</p>
                         <p>Температура: {this.state.temp}</p>
-                        <p>Осадки: {this.state.rain}</p>
+                        <p>Накопл.осадки: {this.state.rain}</p>
                         <p>Ветер: {this.state.wind}, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
                         <p>Завтра</p>
                         <p>Температура: {this.state.temp2}</p>
-                        <p>Осадки: {this.state.rain2}</p>
+                        <p>Накопл.осадки: {this.state.rain2}</p>
                         <p>Ветер: {this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
                         <p>3й день</p>
                         <p>Температура: {this.state.temp3}</p>
-                        <p>Осадки: {this.state.rain3}</p>
+                        <p>Накопл.осадки: {this.state.rain3}</p>
                         <p>Ветер: {this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
                         <p>4й день</p>
                         <p>Температура: {this.state.temp4}</p>
-                        <p>Осадки: {this.state.rain4}</p>
+                        <p>Накопл.осадки: {this.state.rain4}</p>
                         <p>Ветер: {this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
                         <p>5й день</p>
                         <p>Температура: {this.state.temp5}</p>
-                        <p>Осадки: {this.state.rain5}</p>
+                        <p>Накопл.осадки: {this.state.rain5}</p>
                         <p>Ветер: {this.state.wind5}, {this.state.dirwind5}</p>
                     </div>
                 </div>
@@ -191,4 +187,4 @@ class Krasnoyarsk extends React.Component {
     }
 }
 
-export default Krasnoyarsk;
+export default City;
