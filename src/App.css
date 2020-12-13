@@ -29,3 +29,20 @@
     width: 85px;
     margin-left: 25px;
 }
+
+/*classes for coloring blocks: temp, rain and etc...*/
+.block__blue3 {
+    background-color: #4682B4;
+}
+.block__blue2 {
+    background-color: #00BFFF;
+}
+.block__blue1 {
+    background-color: #87CEEB;
+}
+.block__blue0 {
+    background-color: #b0e0e6;
+}
+.green {
+    background-color: #9ACD32;
+}

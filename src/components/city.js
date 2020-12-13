@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from "react";
 import { API_KEY } from "../configs/apiKeys";
 
+let rainClasses = "rain";
+
 class City extends React.Component {
 
     state = {
@@ -45,7 +47,7 @@ class City extends React.Component {
     gettingWeather = async (props) => {  //async - страница не перезагружается
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
 
         /*Создаем массив со всеми значениями осадков*/
         const rain = (start,end) => {
@@ -124,6 +126,26 @@ class City extends React.Component {
         let rainSum5 = rain(32,39).toFixed(2);
         let dirWindRus5 = directionWind(data.list[37].wind.deg)
 
+        /*использовать this или вынести обработку отдельно, !!!перенести в state*/
+        switch (true) {
+            case(rainSum1 >= 30 && rainSum1 <= 999):
+                rainClasses += " block__blue3";
+                break;
+            case(rainSum1 >= 15 && rainSum1 <= 29.999999):
+                rainClasses += " block__blue2";
+                break;
+            case(rainSum1 >= 4 && rainSum1 <= 14.9999999):
+                rainClasses += " block__blue1";
+                break;
+            case(rainSum1 >= 2 && rainSum1 <= 3.99999999):
+                rainClasses += " block__blue0";
+                break;
+            case(rainSum1 >= 0 && rainSum1 <= 1.999999):
+                rainClasses += " green";
+                break;
+            default:
+                rainClasses += "";
+        }
 
         this.setState({
             city: data.city.name,
@@ -189,36 +211,36 @@ class City extends React.Component {
                     </div>
 
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp}</p>
-                        <p className="rain">{this.state.rain}</p>
+                        <p сlassName="temp">{this.state.temp} С</p>
+                        <p className={rainClasses}>{this.state.rain} мм</p>
                         <p className="clouds">{this.state.clouds} %</p>
                         <p className="visibility">{this.state.visibility} км</p>
                         <p className="wind">{this.state.wind}, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp2}</p>
-                        <p className="rain">{this.state.rain2}</p>
+                        <p сlassName="temp">{this.state.temp2} С</p>
+                        <p className={rainClasses}>{this.state.rain2} мм</p>
                         <p className="clouds">{this.state.clouds2} %</p>
                         <p className="visibility">{this.state.visibility2} км</p>
                         <p className="wind">{this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp3}</p>
-                        <p className="rain">{this.state.rain3}</p>
+                        <p сlassName="temp">{this.state.temp3} С</p>
+                        <p className={rainClasses}>{this.state.rain3} мм</p>
                         <p className="clouds">{this.state.clouds3} %</p>
                         <p className="visibility">{this.state.visibility3} км</p>
                         <p className="wind">{this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp4}</p>
-                        <p className="rain">{this.state.rain4}</p>
+                        <p сlassName="temp">{this.state.temp4} С</p>
+                        <p className={rainClasses}>{this.state.rain4} мм</p>
                         <p className="clouds">{this.state.clouds4} %</p>
                         <p className="visibility">{this.state.visibility4} км</p>
                         <p className="wind">{this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp5}</p>
-                        <p className="rain">{this.state.rain5}</p>
+                        <p сlassName="temp">{this.state.temp5} С</p>
+                        <p className={rainClasses}>{this.state.rain5} мм</p>
                         <p className="clouds">{this.state.clouds5} %</p>
                         <p className="visibility">{this.state.visibility5} км</p>
                         <p className="wind">{this.state.wind5}, {this.state.dirwind5}</p>
