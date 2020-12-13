@@ -83,7 +83,7 @@ class City extends React.Component {
             return sumRain + sumSnow;
         }
 
-        /*направление ветра (переписать switch-case)*/
+        /*направление ветра (переписать на switch-case)*/
         const directionWind = (degWind) => {
             if (degWind < 15 || degWind > 345) {
                 return "С";
@@ -177,7 +177,7 @@ class City extends React.Component {
 
                 <div className="days container">
                     <div className="city">
-                        <p>Город: {this.state.city}</p>
+                        <p>{this.state.city}</p>
                     </div>
 
                     <div className="indicators">
@@ -189,39 +189,39 @@ class City extends React.Component {
                     </div>
 
                     <div className="day">
-                        <p>{this.state.temp}</p>
-                        <p>{this.state.rain}</p>
-                        <p>{this.state.clouds} %</p>
-                        <p>{this.state.visibility} км</p>
-                        <p>{this.state.wind}, {this.state.dirwind}</p>
+                        <p сlassName="temp">{this.state.temp}</p>
+                        <p className="rain">{this.state.rain}</p>
+                        <p className="clouds">{this.state.clouds} %</p>
+                        <p className="visibility">{this.state.visibility} км</p>
+                        <p className="wind">{this.state.wind}, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.temp2}</p>
-                        <p>{this.state.rain2}</p>
-                        <p>{this.state.clouds2} %</p>
-                        <p>{this.state.visibility2} км</p>
-                        <p>{this.state.wind2}, {this.state.dirwind2}</p>
+                        <p сlassName="temp">{this.state.temp2}</p>
+                        <p className="rain">{this.state.rain2}</p>
+                        <p className="clouds">{this.state.clouds2} %</p>
+                        <p className="visibility">{this.state.visibility2} км</p>
+                        <p className="wind">{this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.temp3}</p>
-                        <p>{this.state.rain3}</p>
-                        <p>{this.state.clouds3} %</p>
-                        <p>{this.state.visibility3} км</p>
-                        <p>{this.state.wind3}, {this.state.dirwind3}</p>
+                        <p сlassName="temp">{this.state.temp3}</p>
+                        <p className="rain">{this.state.rain3}</p>
+                        <p className="clouds">{this.state.clouds3} %</p>
+                        <p className="visibility">{this.state.visibility3} км</p>
+                        <p className="wind">{this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.temp4}</p>
-                        <p>{this.state.rain4}</p>
-                        <p>{this.state.clouds4} %</p>
-                        <p>{this.state.visibility4} км</p>
-                        <p>{this.state.wind4}, {this.state.dirwind4}</p>
+                        <p сlassName="temp">{this.state.temp4}</p>
+                        <p className="rain">{this.state.rain4}</p>
+                        <p className="clouds">{this.state.clouds4} %</p>
+                        <p className="visibility">{this.state.visibility4} км</p>
+                        <p className="wind">{this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.temp5}</p>
-                        <p>{this.state.rain5}</p>
-                        <p>{this.state.clouds5} %</p>
-                        <p>{this.state.visibility5} км</p>
-                        <p>{this.state.wind5}, {this.state.dirwind5}</p>
+                        <p сlassName="temp">{this.state.temp5}</p>
+                        <p className="rain">{this.state.rain5}</p>
+                        <p className="clouds">{this.state.clouds5} %</p>
+                        <p className="visibility">{this.state.visibility5} км</p>
+                        <p className="wind">{this.state.wind5}, {this.state.dirwind5}</p>
                     </div>
                 </div>
 
