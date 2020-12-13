@@ -10,26 +10,36 @@ class City extends React.Component {
         rain: undefined,
         wind: undefined,
         dirwind: undefined,
+        clouds: undefined,
+        visibility: undefined,
         //tomorrow
         temp2: undefined,
         rain2: undefined,
         wind2: undefined,
         dirwind2: undefined,
+        clouds2: undefined,
+        visibility2: undefined,
         //3rd day
         temp3: undefined,
         rain3: undefined,
         wind3: undefined,
         dirwind3: undefined,
+        clouds3: undefined,
+        visibility3: undefined,
         //4th day
         temp4: undefined,
         rain4: undefined,
         wind4: undefined,
         dirwind4: undefined,
+        clouds4: undefined,
+        visibility4: undefined,
         //5th day
         temp5: undefined,
         rain5: undefined,
         wind5: undefined,
         dirwind5: undefined,
+        clouds5: undefined,
+        visibility5: undefined,
     }
 
     gettingWeather = async (props) => {  //async - страница не перезагружается
@@ -121,26 +131,36 @@ class City extends React.Component {
             temp: data.list[5].main.temp,
             rain: rainSum1,
             wind: data.list[5].wind.speed,
+            clouds: data.list[5].clouds.all,
+            visibility: data.list[5].visibility/1000,
             dirwind: dirWindRus,
             //tomorrow
             temp2: data.list[13].main.temp,
             rain2: rainSum2,
             wind2: data.list[13].wind.speed,
+            clouds2: data.list[13].clouds.all,
+            visibility2: data.list[13].visibility/1000,
             dirwind2: dirWindRus2,
             //3rd day
             temp3: data.list[21].main.temp,
             rain3: rainSum3,
             wind3: data.list[21].wind.speed,
+            clouds3: data.list[21].clouds.all,
+            visibility3: data.list[21].visibility/1000,
             dirwind3: dirWindRus3,
             //4th day
             temp4: data.list[29].main.temp,
             rain4: rainSum4,
             wind4: data.list[29].wind.speed,
+            clouds4: data.list[29].clouds.all,
+            visibility4: data.list[29].visibility/1000,
             dirwind4: dirWindRus4,
             //5th day
             temp5: data.list[37].main.temp,
             rain5: rainSum5,
             wind5: data.list[37].wind.speed,
+            clouds5: data.list[37].clouds.all,
+            visibility5: data.list[37].visibility/1000,
             dirwind5: dirWindRus5,
         });
     }
@@ -163,26 +183,36 @@ class City extends React.Component {
                     <div className="day">
                         <p>Температура: {this.state.temp}</p>
                         <p>Накопл.осадки: {this.state.rain}</p>
+                        <p>Облачность: {this.state.clouds} %</p>
+                        <p>Видимость: {this.state.visibility} км</p>
                         <p>Ветер: {this.state.wind} м/с, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
                         <p>Температура: {this.state.temp2}</p>
                         <p>Накопл.осадки: {this.state.rain2}</p>
+                        <p>Облачность: {this.state.clouds2} %</p>
+                        <p>Видимость: {this.state.visibility2} км</p>
                         <p>Ветер: {this.state.wind2} м/с, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
                         <p>Температура: {this.state.temp3}</p>
                         <p>Накопл.осадки: {this.state.rain3}</p>
+                        <p>Облачность: {this.state.clouds3} %</p>
+                        <p>Видимость: {this.state.visibility3} км</p>
                         <p>Ветер: {this.state.wind3} м/с, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
                         <p>Температура: {this.state.temp4}</p>
                         <p>Накопл.осадки: {this.state.rain4}</p>
+                        <p>Облачность: {this.state.clouds4} %</p>
+                        <p>Видимость: {this.state.visibility4} км</p>
                         <p>Ветер: {this.state.wind4} м/с, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
                         <p>Температура: {this.state.temp5}</p>
                         <p>Накопл.осадки: {this.state.rain5}</p>
+                        <p>Облачность: {this.state.clouds5} %</p>
+                        <p>Видимость: {this.state.visibility5} км</p>
                         <p>Ветер: {this.state.wind5} м/с, {this.state.dirwind5}</p>
                     </div>
                 </div>
