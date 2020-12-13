@@ -4,7 +4,7 @@ import classes from '../styles/header.scss';
 class Header extends React.Component {
     render() {
         return (
-            <div>
+            <div className="header">
                 <h2>Погода в Красноярском крае</h2>
             </div>
         );

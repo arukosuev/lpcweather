@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/header";
+import Heading from "./components/heading";
 import City from "./components/city";
 
 class App extends React.Component { //наследует
@@ -9,6 +10,7 @@ class App extends React.Component { //наследует
 
             <div>
                 <Header />
+                <Heading />
                 <City owmCity="Vanavara" />
                 <City owmCity="Saint Petersburg" />
                 <City owmCity="Krasnoyarsk" />

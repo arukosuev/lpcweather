@@ -152,42 +152,41 @@ class City extends React.Component {
     render() {
 
         return (
+
             <Fragment>
 
-                <div className="days">
-                    <p>Город: {this.state.city}</p>
+                <div className="days container">
+                    <div className="city">
+                        <p>Город: {this.state.city}</p>
+                    </div>
 
                     <div className="day">
-                        <p>Сегодня</p>
                         <p>Температура: {this.state.temp}</p>
                         <p>Накопл.осадки: {this.state.rain}</p>
                         <p>Ветер: {this.state.wind} м/с, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
-                        <p>Завтра</p>
                         <p>Температура: {this.state.temp2}</p>
                         <p>Накопл.осадки: {this.state.rain2}</p>
                         <p>Ветер: {this.state.wind2} м/с, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
-                        <p>3й день</p>
                         <p>Температура: {this.state.temp3}</p>
                         <p>Накопл.осадки: {this.state.rain3}</p>
                         <p>Ветер: {this.state.wind3} м/с, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
-                        <p>4й день</p>
                         <p>Температура: {this.state.temp4}</p>
                         <p>Накопл.осадки: {this.state.rain4}</p>
                         <p>Ветер: {this.state.wind4} м/с, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
-                        <p>5й день</p>
                         <p>Температура: {this.state.temp5}</p>
                         <p>Накопл.осадки: {this.state.rain5}</p>
                         <p>Ветер: {this.state.wind5} м/с, {this.state.dirwind5}</p>
                     </div>
                 </div>
+
             </Fragment>
         );
     }

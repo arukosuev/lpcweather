@@ -1,3 +1,22 @@
+.container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.headings {
+    display: flex;
+    background-color: gainsboro;
+    align-items: center;
+    justify-content: center;
+}
+
+.city {
+    width: 200px;
+}
+
 .days {
     display: flex;
     background-color: beige;
@@ -6,5 +25,6 @@
 }
 
 .day {
-    margin-left: 80px;
+    width: 150px;
+    margin-left: 25px;
 }
