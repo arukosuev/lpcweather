@@ -180,40 +180,48 @@ class City extends React.Component {
                         <p>Город: {this.state.city}</p>
                     </div>
 
+                    <div className="indicators">
+                        <p>Температура</p>
+                        <p>Накопл.осадки</p>
+                        <p>Облачность</p>
+                        <p>Видимость</p>
+                        <p>Ветер, м/с</p>
+                    </div>
+
                     <div className="day">
-                        <p>Температура: {this.state.temp}</p>
-                        <p>Накопл.осадки: {this.state.rain}</p>
-                        <p>Облачность: {this.state.clouds} %</p>
-                        <p>Видимость: {this.state.visibility} км</p>
-                        <p>Ветер: {this.state.wind} м/с, {this.state.dirwind}</p>
+                        <p>{this.state.temp}</p>
+                        <p>{this.state.rain}</p>
+                        <p>{this.state.clouds} %</p>
+                        <p>{this.state.visibility} км</p>
+                        <p>{this.state.wind}, {this.state.dirwind}</p>
                     </div>
                     <div className="day">
-                        <p>Температура: {this.state.temp2}</p>
-                        <p>Накопл.осадки: {this.state.rain2}</p>
-                        <p>Облачность: {this.state.clouds2} %</p>
-                        <p>Видимость: {this.state.visibility2} км</p>
-                        <p>Ветер: {this.state.wind2} м/с, {this.state.dirwind2}</p>
+                        <p>{this.state.temp2}</p>
+                        <p>{this.state.rain2}</p>
+                        <p>{this.state.clouds2} %</p>
+                        <p>{this.state.visibility2} км</p>
+                        <p>{this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
-                        <p>Температура: {this.state.temp3}</p>
-                        <p>Накопл.осадки: {this.state.rain3}</p>
-                        <p>Облачность: {this.state.clouds3} %</p>
-                        <p>Видимость: {this.state.visibility3} км</p>
-                        <p>Ветер: {this.state.wind3} м/с, {this.state.dirwind3}</p>
+                        <p>{this.state.temp3}</p>
+                        <p>{this.state.rain3}</p>
+                        <p>{this.state.clouds3} %</p>
+                        <p>{this.state.visibility3} км</p>
+                        <p>{this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
-                        <p>Температура: {this.state.temp4}</p>
-                        <p>Накопл.осадки: {this.state.rain4}</p>
-                        <p>Облачность: {this.state.clouds4} %</p>
-                        <p>Видимость: {this.state.visibility4} км</p>
-                        <p>Ветер: {this.state.wind4} м/с, {this.state.dirwind4}</p>
+                        <p>{this.state.temp4}</p>
+                        <p>{this.state.rain4}</p>
+                        <p>{this.state.clouds4} %</p>
+                        <p>{this.state.visibility4} км</p>
+                        <p>{this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
-                        <p>Температура: {this.state.temp5}</p>
-                        <p>Накопл.осадки: {this.state.rain5}</p>
-                        <p>Облачность: {this.state.clouds5} %</p>
-                        <p>Видимость: {this.state.visibility5} км</p>
-                        <p>Ветер: {this.state.wind5} м/с, {this.state.dirwind5}</p>
+                        <p>{this.state.temp5}</p>
+                        <p>{this.state.rain5}</p>
+                        <p>{this.state.clouds5} %</p>
+                        <p>{this.state.visibility5} км</p>
+                        <p>{this.state.wind5}, {this.state.dirwind5}</p>
                     </div>
                 </div>
 

@@ -6,6 +6,9 @@ const heading = () => {
             <div className="city">
                 <p>City</p>
             </div>
+            <div className="indicators">
+                <p>Показатели</p>
+            </div>
             <div className="day">
                 <p>Today</p>
             </div>

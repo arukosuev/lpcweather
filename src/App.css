@@ -13,7 +13,7 @@
     justify-content: center;
 }
 
-.city {
+.city, .indicators {
     width: 200px;
 }
 
@@ -22,9 +22,10 @@
     background-color: beige;
     align-items: center;
     justify-content: center;
+    outline: 1px solid darkgrey;
 }
 
 .day {
-    width: 150px;
+    width: 85px;
     margin-left: 25px;
 }
