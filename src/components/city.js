@@ -1,19 +1,18 @@
 import React, {Component, Fragment} from "react";
 import { API_KEY } from "../configs/apiKeys";
 
-let rainClasses = "rain";
 
 class City extends React.Component {
 
     state = {
         city: undefined,
         //today
-        temp: undefined,
-        rain: undefined,
-        wind: undefined,
-        dirwind: undefined,
-        clouds: undefined,
-        visibility: undefined,
+        temp1: undefined,
+        rain1: undefined,
+        wind1: undefined,
+        dirwind1: undefined,
+        clouds1: undefined,
+        visibility1: undefined,
         //tomorrow
         temp2: undefined,
         rain2: undefined,
@@ -44,12 +43,12 @@ class City extends React.Component {
         visibility5: undefined,
     }
 
-    gettingWeather = async (props) => {  //async - страница не перезагружается
+    gettingWeather = async (props) => {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
         //console.log(data);
 
-        /*Создаем массив со всеми значениями осадков*/
+        /*Создаем массив со всеми значениями осадков// need refactoring*/
         const rain = (start,end) => {
             /*дождь*/
             let arrayRain = [];
@@ -126,36 +125,45 @@ class City extends React.Component {
         let rainSum5 = rain(32,39).toFixed(2);
         let dirWindRus5 = directionWind(data.list[37].wind.deg)
 
-        /*использовать this или вынести обработку отдельно, !!!перенести в state*/
-        switch (true) {
-            case(rainSum1 >= 30 && rainSum1 <= 999):
-                rainClasses += " block__blue3";
-                break;
-            case(rainSum1 >= 15 && rainSum1 <= 29.999999):
-                rainClasses += " block__blue2";
-                break;
-            case(rainSum1 >= 4 && rainSum1 <= 14.9999999):
-                rainClasses += " block__blue1";
-                break;
-            case(rainSum1 >= 2 && rainSum1 <= 3.99999999):
-                rainClasses += " block__blue0";
-                break;
-            case(rainSum1 >= 0 && rainSum1 <= 1.999999):
-                rainClasses += " green";
-                break;
-            default:
-                rainClasses += "";
+
+        const getClassForRainSum = (rainSum) => {
+            switch (true) {
+                case(rainSum >= 30):
+                    return " block__blue3";
+                    break;
+                case(rainSum >= 15):
+                    return  " block__blue2";
+                    break;
+                case(rainSum >= 4):
+                    return  " block__blue1";
+                    break;
+                case(rainSum >= 2):
+                    return " block__blue0";
+                    break;
+                case(rainSum >= 0):
+                    return " green";
+                    break;
+                default:
+                    return "";
+            }
         }
+
+        const rainClassesDay1 = "rain" + getClassForRainSum(rainSum1);
+        const rainClassesDay2 = "rain" + getClassForRainSum(rainSum2);
+        const rainClassesDay3 = "rain" + getClassForRainSum(rainSum3);
+        const rainClassesDay4 = "rain" + getClassForRainSum(rainSum4);
+        const rainClassesDay5 = "rain" + getClassForRainSum(rainSum5);
+
 
         this.setState({
             city: data.city.name,
             //today
-            temp: data.list[5].main.temp,
-            rain: rainSum1,
-            wind: data.list[5].wind.speed,
+            temp1: data.list[5].main.temp,
+            rain1: rainSum1,
+            wind11: data.list[5].wind.speed,
             clouds: data.list[5].clouds.all,
-            visibility: data.list[5].visibility/1000,
-            dirwind: dirWindRus,
+            visibility1: data.list[5].visibility/1000,
+            dirwind1: dirWindRus,
             //tomorrow
             temp2: data.list[13].main.temp,
             rain2: rainSum2,
@@ -193,6 +201,7 @@ class City extends React.Component {
 
     render() {
 
+
         return (
 
             <Fragment>
@@ -211,36 +220,36 @@ class City extends React.Component {
                     </div>
 
                     <div className="day">
-                        <p сlassName="temp">{this.state.temp} С</p>
-                        <p className={rainClasses}>{this.state.rain} мм</p>
-                        <p className="clouds">{this.state.clouds} %</p>
-                        <p className="visibility">{this.state.visibility} км</p>
-                        <p className="wind">{this.state.wind}, {this.state.dirwind}</p>
+                        <p сlassName="temp">{this.state.temp1} С</p>
+                        <p className={rainClassesDay1}>{this.state.rain1} мм</p>
+                        <p className="clouds">{this.state.clouds1} %</p>
+                        <p className="visibility">{this.state.visibility1} км</p>
+                        <p className="wind">{this.state.wind1}, {this.state.dirwind1}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp2} С</p>
-                        <p className={rainClasses}>{this.state.rain2} мм</p>
+                        <p className={rainClassesDay2}>{this.state.rain2} мм</p>
                         <p className="clouds">{this.state.clouds2} %</p>
                         <p className="visibility">{this.state.visibility2} км</p>
                         <p className="wind">{this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp3} С</p>
-                        <p className={rainClasses}>{this.state.rain3} мм</p>
+                        <p className={rainClassesDay3}>{this.state.rain3} мм</p>
                         <p className="clouds">{this.state.clouds3} %</p>
                         <p className="visibility">{this.state.visibility3} км</p>
                         <p className="wind">{this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp4} С</p>
-                        <p className={rainClasses}>{this.state.rain4} мм</p>
+                        <p className={rainClassesDay4}>{this.state.rain4} мм</p>
                         <p className="clouds">{this.state.clouds4} %</p>
                         <p className="visibility">{this.state.visibility4} км</p>
                         <p className="wind">{this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp5} С</p>
-                        <p className={rainClasses}>{this.state.rain5} мм</p>
+                        <p className={rainClassesDay5}>{this.state.rain5} мм</p>
                         <p className="clouds">{this.state.clouds5} %</p>
                         <p className="visibility">{this.state.visibility5} км</p>
                         <p className="wind">{this.state.wind5}, {this.state.dirwind5}</p>

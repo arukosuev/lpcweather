@@ -15,6 +15,8 @@ class App extends React.Component { //наследует
                 <City owmCity="Saint Petersburg" />
                 <City owmCity="Krasnoyarsk" />
                 <City owmCity="Kodinsk" />
+                <City owmCity="Krasnodar" />
+                <City owmCity="Sochi" />
             </div>
         );
     }
