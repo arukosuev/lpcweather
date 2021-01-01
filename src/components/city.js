@@ -49,39 +49,15 @@ class City extends React.Component {
         //console.log(data);
 
         /*Создаем массив со всеми значениями осадков// need refactoring*/
-        const rain = (start,end) => {
-            /*дождь*/
-            let arrayRain = [];
+        const getSumRain = (data, start, end) => {
+            let sum = 0
             for (let i = start; i <= end; i++) {
-                try {
-                    arrayRain[i-start] = data.list[i].rain['3h'];
-                } catch (e) {
-                    arrayRain[i-start] = 0;
-                }
+                const rain = data.list[i]?.rain?.['3h']
+                const snow = data.list[i]?.snow?.['3h']
+                if (rain) sum += rain
+                if (snow) sum += snow
             }
-
-            let sumRain = 0;
-            for(let i = 0; i < arrayRain.length; i++){
-                sumRain += arrayRain[i];
-            }
-
-            /*снег*/
-            let arraySnow = [];
-            for (let i = start; i <= end; i++) {
-                try {
-                    arraySnow[i-start] = data.list[i].snow['3h'];
-                } catch (e) {
-                    arraySnow[i-start] = 0;
-                }
-            }
-
-            let sumSnow = 0;
-            for(let i = 0; i < arraySnow.length; i++){
-                sumSnow += arraySnow[i];
-            }
-
-            /*все осадки*/
-            return sumRain + sumSnow;
+            return sum
         }
 
         /*направление ветра (переписать на switch-case)*/
@@ -106,23 +82,23 @@ class City extends React.Component {
         }
 
         /*1й день*/
-        let rainSum1 = rain(0,7).toFixed(2);
+        let rainSum1 = getSumRain(data,0,7).toFixed(2);
         let dirWindRus = directionWind(data.list[5].wind.deg)
 
         /*2й день*/
-        let rainSum2 = rain(8,15).toFixed(2);
+        let rainSum2 = getSumRain(data,8,15).toFixed(2);
         let dirWindRus2 = directionWind(data.list[13].wind.deg)
 
         /*3й день*/
-        let rainSum3 = rain(16,23).toFixed(2);
+        let rainSum3 = getSumRain(data,16,23).toFixed(2);
         let dirWindRus3 = directionWind(data.list[21].wind.deg)
 
         /*4й день*/
-        let rainSum4 = rain(24,31).toFixed(2);
+        let rainSum4 = getSumRain(data,24,31).toFixed(2);
         let dirWindRus4 = directionWind(data.list[29].wind.deg)
 
         /*5й день*/
-        let rainSum5 = rain(32,39).toFixed(2);
+        let rainSum5 = getSumRain(data,32,39).toFixed(2);
         let dirWindRus5 = directionWind(data.list[37].wind.deg)
 
 
