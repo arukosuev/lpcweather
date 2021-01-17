@@ -1,47 +1,15 @@
-import React, {Component, Fragment} from "react";
+import React, {Fragment} from "react";
 import { API_KEY } from "../configs/apiKeys";
 
+let rainClassesDay1 = "rain";
+let rainClassesDay2 = "rain";
+let rainClassesDay3 = "rain";
+let rainClassesDay4 = "rain";
+let rainClassesDay5 = "rain";
 
 class City extends React.Component {
 
-    state = {
-        city: undefined,
-        //today
-        temp1: undefined,
-        rain1: undefined,
-        wind1: undefined,
-        dirwind1: undefined,
-        clouds1: undefined,
-        visibility1: undefined,
-        //tomorrow
-        temp2: undefined,
-        rain2: undefined,
-        wind2: undefined,
-        dirwind2: undefined,
-        clouds2: undefined,
-        visibility2: undefined,
-        //3rd day
-        temp3: undefined,
-        rain3: undefined,
-        wind3: undefined,
-        dirwind3: undefined,
-        clouds3: undefined,
-        visibility3: undefined,
-        //4th day
-        temp4: undefined,
-        rain4: undefined,
-        wind4: undefined,
-        dirwind4: undefined,
-        clouds4: undefined,
-        visibility4: undefined,
-        //5th day
-        temp5: undefined,
-        rain5: undefined,
-        wind5: undefined,
-        dirwind5: undefined,
-        clouds5: undefined,
-        visibility5: undefined,
-    }
+    state = {}
 
     gettingWeather = async (props) => {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
@@ -103,32 +71,24 @@ class City extends React.Component {
 
 
         const getClassForRainSum = (rainSum) => {
-            switch (true) {
-                case(rainSum >= 30):
-                    return " block__blue3";
-                    break;
-                case(rainSum >= 15):
-                    return  " block__blue2";
-                    break;
-                case(rainSum >= 4):
-                    return  " block__blue1";
-                    break;
-                case(rainSum >= 2):
-                    return " block__blue0";
-                    break;
-                case(rainSum >= 0):
-                    return " green";
-                    break;
-                default:
-                    return "";
+            if (rainSum >= 25) {
+                return " block__blue3";
+            } else if (rainSum >= 15 && rainSum < 25) {
+                return " block__blue2";
+            } else if (rainSum >= 4 && rainSum < 15) {
+                return " block__blue1";
+            } else if (rainSum >= 2 && rainSum < 4) {
+                return " block__blue0";
+            } else if (rainSum >= 0 && rainSum < 2) {
+                return " green";
             }
         }
 
-        const rainClassesDay1 = "rain" + getClassForRainSum(rainSum1);
-        const rainClassesDay2 = "rain" + getClassForRainSum(rainSum2);
-        const rainClassesDay3 = "rain" + getClassForRainSum(rainSum3);
-        const rainClassesDay4 = "rain" + getClassForRainSum(rainSum4);
-        const rainClassesDay5 = "rain" + getClassForRainSum(rainSum5);
+        rainClassesDay1 += getClassForRainSum(rainSum1);
+        rainClassesDay2 += getClassForRainSum(rainSum2);
+        rainClassesDay3 += getClassForRainSum(rainSum3);
+        rainClassesDay4 += getClassForRainSum(rainSum4);
+        rainClassesDay5 += getClassForRainSum(rainSum5);
 
 
         this.setState({
@@ -136,8 +96,8 @@ class City extends React.Component {
             //today
             temp1: data.list[5].main.temp,
             rain1: rainSum1,
-            wind11: data.list[5].wind.speed,
-            clouds: data.list[5].clouds.all,
+            wind1: data.list[5].wind.speed,
+            clouds1: data.list[5].clouds.all,
             visibility1: data.list[5].visibility/1000,
             dirwind1: dirWindRus,
             //tomorrow
