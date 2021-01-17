@@ -71,16 +71,28 @@ class City extends React.Component {
 
 
         const getClassForRainSum = (rainSum) => {
-            if (rainSum >= 25) {
-                return " block__blue3";
-            } else if (rainSum >= 15 && rainSum < 25) {
-                return " block__blue2";
-            } else if (rainSum >= 4 && rainSum < 15) {
-                return " block__blue1";
-            } else if (rainSum >= 2 && rainSum < 4) {
-                return " block__blue0";
-            } else if (rainSum >= 0 && rainSum < 2) {
-                return " green";
+
+            switch (true) {
+
+                case (rainSum >= 25):
+                    return " block__blue3";
+                    break;
+
+                case (rainSum >= 15):
+                    return " block__blue2";
+                    break;
+
+                case (rainSum >= 4):
+                    return " block__blue1";
+                    break;
+
+                case (rainSum >= 2):
+                    return " block__blue0";
+                    break;
+
+                case (rainSum >= 0):
+                    return "";
+                    break;
             }
         }
 
