@@ -1,11 +1,6 @@
 import React, {Fragment} from "react";
 import { API_KEY } from "../configs/apiKeys";
 
-let rainClassesDay1 = "rain";
-let rainClassesDay2 = "rain";
-let rainClassesDay3 = "rain";
-let rainClassesDay4 = "rain";
-let rainClassesDay5 = "rain";
 
 class City extends React.Component {
 
@@ -96,12 +91,11 @@ class City extends React.Component {
             }
         }
 
-        rainClassesDay1 += getClassForRainSum(rainSum1);
-        rainClassesDay2 += getClassForRainSum(rainSum2);
-        rainClassesDay3 += getClassForRainSum(rainSum3);
-        rainClassesDay4 += getClassForRainSum(rainSum4);
-        rainClassesDay5 += getClassForRainSum(rainSum5);
-
+        const rainClassesDay1 = "rain" + getClassForRainSum(rainSum1);
+        const rainClassesDay2 = "rain" + getClassForRainSum(rainSum2);
+        const rainClassesDay3 = "rain" + getClassForRainSum(rainSum3);
+        const rainClassesDay4 = "rain" + getClassForRainSum(rainSum4);
+        const rainClassesDay5 = "rain" + getClassForRainSum(rainSum5);
 
         this.setState({
             city: data.city.name,
