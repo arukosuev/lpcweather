@@ -19,7 +19,7 @@
 
 .days {
     display: flex;
-    background-color: beige;
+    background-color: whitesmoke;
     align-items: center;
     justify-content: center;
     outline: 1px solid darkgrey;
@@ -35,14 +35,12 @@
     background-color: blueviolet;
 }
 .block__blue2 {
-    background-color: #00BFFF;
+    background-color: royalblue;
 }
 .block__blue1 {
-    background-color: #87CEEB;
+    background-color: #00BFFF;
 }
 .block__blue0 {
     background-color: #b0e0e6;
 }
-.green {
-    background-color: #9ACD32;
-}
+

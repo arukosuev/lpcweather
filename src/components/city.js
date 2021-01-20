@@ -6,12 +6,12 @@ class City extends React.Component {
 
     state = {}
 
-    gettingWeather = async (props) => {
+    gettingWeather = async () => {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
         //console.log(data);
 
-        /*Создаем массив со всеми значениями осадков// need refactoring*/
+        /*Создаем массив со всеми значениями осадков */
         const getSumRain = (data, start, end) => {
             let sum = 0
             for (let i = start; i <= end; i++) {
@@ -81,7 +81,7 @@ class City extends React.Component {
                     return " block__blue1";
                     break;
 
-                case (rainSum >= 2):
+                case (rainSum >= 1.5):
                     return " block__blue0";
                     break;
 
@@ -91,11 +91,13 @@ class City extends React.Component {
             }
         }
 
+
         const rainClassesDay1 = "rain" + getClassForRainSum(rainSum1);
         const rainClassesDay2 = "rain" + getClassForRainSum(rainSum2);
         const rainClassesDay3 = "rain" + getClassForRainSum(rainSum3);
         const rainClassesDay4 = "rain" + getClassForRainSum(rainSum4);
         const rainClassesDay5 = "rain" + getClassForRainSum(rainSum5);
+
 
         this.setState({
             city: data.city.name,
@@ -106,6 +108,7 @@ class City extends React.Component {
             clouds1: data.list[5].clouds.all,
             visibility1: data.list[5].visibility/1000,
             dirwind1: dirWindRus,
+            rainClassesName1: rainClassesDay1,
             //tomorrow
             temp2: data.list[13].main.temp,
             rain2: rainSum2,
@@ -113,6 +116,7 @@ class City extends React.Component {
             clouds2: data.list[13].clouds.all,
             visibility2: data.list[13].visibility/1000,
             dirwind2: dirWindRus2,
+            rainClassesName2: rainClassesDay2,
             //3rd day
             temp3: data.list[21].main.temp,
             rain3: rainSum3,
@@ -120,6 +124,7 @@ class City extends React.Component {
             clouds3: data.list[21].clouds.all,
             visibility3: data.list[21].visibility/1000,
             dirwind3: dirWindRus3,
+            rainClassesName3: rainClassesDay3,
             //4th day
             temp4: data.list[29].main.temp,
             rain4: rainSum4,
@@ -127,6 +132,7 @@ class City extends React.Component {
             clouds4: data.list[29].clouds.all,
             visibility4: data.list[29].visibility/1000,
             dirwind4: dirWindRus4,
+            rainClassesName4: rainClassesDay4,
             //5th day
             temp5: data.list[37].main.temp,
             rain5: rainSum5,
@@ -134,6 +140,7 @@ class City extends React.Component {
             clouds5: data.list[37].clouds.all,
             visibility5: data.list[37].visibility/1000,
             dirwind5: dirWindRus5,
+            rainClassesName5: rainClassesDay5,
         });
     }
 
@@ -163,35 +170,35 @@ class City extends React.Component {
 
                     <div className="day">
                         <p сlassName="temp">{this.state.temp1} С</p>
-                        <p className={rainClassesDay1}>{this.state.rain1} мм</p>
+                        <p className={this.state.rainClassesName1}>{this.state.rain1} мм</p>
                         <p className="clouds">{this.state.clouds1} %</p>
                         <p className="visibility">{this.state.visibility1} км</p>
                         <p className="wind">{this.state.wind1}, {this.state.dirwind1}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp2} С</p>
-                        <p className={rainClassesDay2}>{this.state.rain2} мм</p>
+                        <p className={this.state.rainClassesName2}>{this.state.rain2} мм</p>
                         <p className="clouds">{this.state.clouds2} %</p>
                         <p className="visibility">{this.state.visibility2} км</p>
                         <p className="wind">{this.state.wind2}, {this.state.dirwind2}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp3} С</p>
-                        <p className={rainClassesDay3}>{this.state.rain3} мм</p>
+                        <p className={this.state.rainClassesName3}>{this.state.rain3} мм</p>
                         <p className="clouds">{this.state.clouds3} %</p>
                         <p className="visibility">{this.state.visibility3} км</p>
                         <p className="wind">{this.state.wind3}, {this.state.dirwind3}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp4} С</p>
-                        <p className={rainClassesDay4}>{this.state.rain4} мм</p>
+                        <p className={this.state.rainClassesName4}>{this.state.rain4} мм</p>
                         <p className="clouds">{this.state.clouds4} %</p>
                         <p className="visibility">{this.state.visibility4} км</p>
                         <p className="wind">{this.state.wind4}, {this.state.dirwind4}</p>
                     </div>
                     <div className="day">
                         <p сlassName="temp">{this.state.temp5} С</p>
-                        <p className={rainClassesDay5}>{this.state.rain5} мм</p>
+                        <p className={this.state.rainClassesName5}>{this.state.rain5} мм</p>
                         <p className="clouds">{this.state.clouds5} %</p>
                         <p className="visibility">{this.state.visibility5} км</p>
                         <p className="wind">{this.state.wind5}, {this.state.dirwind5}</p>
