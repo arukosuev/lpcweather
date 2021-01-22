@@ -30,17 +30,32 @@
     margin-left: 25px;
 }
 
-/*classes for coloring blocks: temp, rain and etc...*/
-.block__blue3 {
+/*classes for coloring blocks: rain*/
+.rain__blue3 {
     background-color: blueviolet;
 }
-.block__blue2 {
+.rain__blue2 {
     background-color: royalblue;
 }
-.block__blue1 {
+.rain__blue1 {
     background-color: #00BFFF;
 }
-.block__blue0 {
+.rain__blue0 {
     background-color: #b0e0e6;
+
+}
+
+/*classes for coloring blocks: wind , temp*/
+.block__red3 {
+    background-color: red;
+}
+.block__red2 {
+    background-color: lightcoral;
+}
+.block__red1 {
+    background-color: pink;
+}
+.block__red0 {
+    background-color: lightgoldenrodyellow;
 }
 

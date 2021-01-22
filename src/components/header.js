@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <h2>Погода в Красноярском крае</h2>
+                <h2>Погода в нескольких городах</h2>
             </div>
         );
     }

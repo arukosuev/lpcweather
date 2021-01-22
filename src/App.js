@@ -11,12 +11,12 @@ class App extends React.Component { //наследует
             <div>
                 <Header />
                 <Heading />
-                <City owmCity="Shushenskoye" />
-                <City owmCity="Yermakovskoye" />
-                <City owmCity="Uzhur" />
-                <City owmCity="Krasnoyarsk" />
-                <City owmCity="Aban" />
-                <City owmCity="Dzerzhinskoye" />
+                <City owmCity="Dubai" />
+                <City owmCity="Algiers" />
+                <City owmCity="Madrid" />
+                <City owmCity="Sochi" />
+                <City owmCity="Singapore" />
+                <City owmCity="Stockholm" />
 
             </div>
         );
