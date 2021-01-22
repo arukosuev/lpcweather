@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import { API_KEY } from "../configs/apiKeys";
+import classes from '../styles/coloredClassNames.scss';
 
 
 class City extends React.Component {

@@ -3,7 +3,7 @@ import Header from "./components/header";
 import Heading from "./components/heading";
 import City from "./components/city";
 
-class App extends React.Component { //наследует
+class App extends React.Component {
 
     render() {
         return (
@@ -23,7 +23,7 @@ class App extends React.Component { //наследует
     }
 }
 
-export default App; // экспортируем приложение в index.js
+export default App;
 
 
 
