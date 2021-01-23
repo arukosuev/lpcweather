@@ -17,6 +17,10 @@ class App extends React.Component {
                 <City owmCity="Sochi" />
                 <City owmCity="Singapore" />
                 <City owmCity="Stockholm" />
+                <City owmCity="Krasnodar" />
+                <City owmCity="San Paolo" />
+                <City owmCity="Phuket" />
+                <City owmCity="Singaraja" />
 
             </div>
         );

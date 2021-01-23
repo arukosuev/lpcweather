@@ -109,6 +109,10 @@ class City extends React.Component {
                     return " rain__blue0";
                     break;
 
+                case (rainSum >= 0.3):
+                    return " block__red0";
+                    break;
+
                 case (rainSum >= 0):
                     return "";
                     break;
@@ -141,7 +145,7 @@ class City extends React.Component {
 
             switch (true) {
 
-                case (temperature >= 32):
+                case (temperature >= 31):
                     return " block__red3";
                     break;
 

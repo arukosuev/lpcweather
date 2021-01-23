@@ -65,64 +65,64 @@ class Heading extends React.Component {
                         <p>Локальное время</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time1}</p>
+                        <p className="time">{this.state.time1}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time2}</p>
+                        <p className="time">{this.state.time2}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time3}</p>
+                        <p className="time">{this.state.time3}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time4}</p>
+                        <p className="time">{this.state.time4}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time5}</p>
+                        <p className="time">{this.state.time5}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time6}</p>
+                        <p className="time">{this.state.time6}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time7}</p>
+                        <p className="time">{this.state.time7}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time8}</p>
+                        <p className="time">{this.state.time8}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time9}</p>
+                        <p className="time">{this.state.time9}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time10}</p>
+                        <p className="time">{this.state.time10}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time11}</p>
+                        <p className="time">{this.state.time11}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time12}</p>
+                        <p className="time">{this.state.time12}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time13}</p>
+                        <p className="time">{this.state.time13}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time14}</p>
+                        <p className="time">{this.state.time14}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time15}</p>
+                        <p className="time">{this.state.time15}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time16}</p>
+                        <p className="time">{this.state.time16}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time17}</p>
+                        <p className="time">{this.state.time17}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time18}</p>
+                        <p className="time">{this.state.time18}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time19}</p>
+                        <p className="time">{this.state.time19}</p>
                     </div>
                     <div className="day">
-                        <p>{this.state.time20}</p>
+                        <p className="time">{this.state.time20}</p>
                     </div>
                 </div>
 
