@@ -1,3 +1,7 @@
+body {
+    font-size:11px;
+}
+
 .container {
     width: 1200px;
     height: 100%;
@@ -14,7 +18,7 @@
 }
 
 .city, .indicators {
-    width: 200px;
+    width: 75px;
 }
 
 .days {
@@ -26,8 +30,8 @@
 }
 
 .day {
-    width: 85px;
-    margin-left: 25px;
+    width: 45px;
+    margin-left: 5px;
 }
 
 

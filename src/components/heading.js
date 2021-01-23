@@ -11,12 +11,40 @@ class Heading extends React.Component {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${defaultCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
 
+        const timeConverter = (UNIX_timestamp) => {
+            let timestamp = new Date(UNIX_timestamp * 1000);
+            let months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+            let year = String(timestamp.getFullYear()).substr(-2);
+            let month = months[timestamp.getMonth()];
+            let date = timestamp.getDate();
+            let hour = timestamp.getHours();
+            let min = String(timestamp.getMinutes())+"0";
+            let time = date + '.' + month + '.' + year + ' ' + hour + ':' + min;
+            return time;
+        }
+
+
         this.setState({
-            time1:data.list[5].dt_txt,
-            time2:data.list[13].dt_txt,
-            time3:data.list[21].dt_txt,
-            time4:data.list[29].dt_txt,
-            time5:data.list[37].dt_txt,
+            time1:timeConverter(data.list[0].dt),
+            time2:timeConverter(data.list[2].dt),
+            time3:timeConverter(data.list[4].dt),
+            time4:timeConverter(data.list[6].dt),
+            time5:timeConverter(data.list[8].dt),
+            time6:timeConverter(data.list[10].dt),
+            time7:timeConverter(data.list[12].dt),
+            time8:timeConverter(data.list[14].dt),
+            time9:timeConverter(data.list[16].dt),
+            time10:timeConverter(data.list[18].dt),
+            time11:timeConverter(data.list[20].dt),
+            time12:timeConverter(data.list[22].dt),
+            time13:timeConverter(data.list[24].dt),
+            time14:timeConverter(data.list[26].dt),
+            time15:timeConverter(data.list[28].dt),
+            time16:timeConverter(data.list[30].dt),
+            time17:timeConverter(data.list[32].dt),
+            time18:timeConverter(data.list[34].dt),
+            time19:timeConverter(data.list[36].dt),
+            time20:timeConverter(data.list[38].dt),
         });
     }
 
@@ -28,36 +56,13 @@ class Heading extends React.Component {
         return(
 
             <Fragment>
-                <div className="container headings">
-                    <div className="city">
-                        <p></p>
-                    </div>
-                    <div className="indicators">
-                        <p>Day</p>
-                    </div>
-                    <div className="day">
-                        <p>Today</p>
-                    </div>
-                    <div className="day">
-                        <p>Tomorrow</p>
-                    </div>
-                    <div className="day">
-                        <p>3rd day</p>
-                    </div>
-                    <div className="day">
-                        <p>4th day</p>
-                    </div>
-                    <div className="day">
-                        <p>5th day</p>
-                    </div>
-                </div>
 
                 <div className="container headings">
                     <div className="city">
-                        <p>City</p>
+                        <p>Город</p>
                     </div>
                     <div className="indicators">
-                        <p>Time, UTC +0</p>
+                        <p>Локальное время</p>
                     </div>
                     <div className="day">
                         <p>{this.state.time1}</p>
@@ -73,6 +78,51 @@ class Heading extends React.Component {
                     </div>
                     <div className="day">
                         <p>{this.state.time5}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time6}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time7}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time8}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time9}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time10}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time11}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time12}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time13}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time14}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time15}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time16}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time17}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time18}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time19}</p>
+                    </div>
+                    <div className="day">
+                        <p>{this.state.time20}</p>
                     </div>
                 </div>
 
