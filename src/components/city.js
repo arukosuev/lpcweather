@@ -24,7 +24,6 @@ class City extends React.Component {
         }
 
 
-
         /* refactoring on switch-case */
         const directionWind = (degWind) => {
             if (degWind < 15 || degWind > 345) {

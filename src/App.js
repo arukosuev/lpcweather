@@ -18,6 +18,7 @@ class App extends React.Component {
                 <City owmCity="Singapore" />
                 <City owmCity="Stockholm" />
                 <City owmCity="Krasnodar" />
+                <City owmCity="Rostov-on-Don" />
                 <City owmCity="San Paolo" />
                 <City owmCity="Phuket" />
                 <City owmCity="Singaraja" />
