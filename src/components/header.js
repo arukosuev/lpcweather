@@ -23,7 +23,7 @@ class Header extends React.Component{
                     <h2>Погода в нескольких городах</h2>
                 </div>
                 <div>
-                    <form className="" onSubmit={this.handleSubmit}>
+                    <form className="form" onSubmit={this.handleSubmit}>
                         <label>
                             Выбери хрень:
                             <select value={this.state.value} onChange={this.handleChange}>

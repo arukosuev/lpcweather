@@ -11,17 +11,29 @@ class App extends React.Component {
             <div>
                 <Header />
                 <Heading />
-                <City owmCity="Dubai" />
-                <City owmCity="Algiers" />
-                <City owmCity="Madrid" />
-                <City owmCity="Sochi" />
-                <City owmCity="Singapore" />
-                <City owmCity="Stockholm" />
-                <City owmCity="Krasnodar" />
-                <City owmCity="Rostov-on-Don" />
-                <City owmCity="San Paolo" />
-                <City owmCity="Phuket" />
-                <City owmCity="Singaraja" />
+
+                <div className="africa">
+                    <City owmCity="Dubai" />
+                    <City owmCity="Algiers" />
+                </div>
+
+                <div className="europe">
+                    <City owmCity="Stockholm" />
+                    <City owmCity="Madrid" />
+                </div>
+
+                <div className="russia">
+                    <City owmCity="Sochi" />
+                    <City owmCity="Krasnodar" />
+                    <City owmCity="Rostov-on-Don" />
+                </div>
+
+                <div className="others">
+                    <City owmCity="Singapore" />
+                    <City owmCity="San Paolo" />
+                    <City owmCity="Phuket" />
+                    <City owmCity="Singaraja" />
+                </div>
 
             </div>
         );
