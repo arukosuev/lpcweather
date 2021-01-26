@@ -12,7 +12,7 @@ class Header extends React.Component{
     }
 
     handleSubmit = (event) => {
-        alert('Your favorite flavor is: ' + this.state.value);
+        alert('Выебри хрень: ' + this.state.value);
         event.preventDefault();
     }
 
