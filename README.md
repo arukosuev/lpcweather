@@ -1,8 +1,10 @@
 **This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
+# Many cities weather app (React)
 
-Небольшой SPA о погоде на территории Красноярского края.
-В стадии разработки...
+### ⚙️Use `npm start` command to run app locally
 
-Каждый город реализован как компонент.
-Происходит запрос к серверу погоды и его отображение в компоненте с помощью JS
+- React 
+- SCSS/CSS3 
+- Desktop First
+- still coding...
