@@ -7,13 +7,13 @@ class Header extends React.Component{
         value: 'coconut' // почему-то нельзя тут двойный кавычки :)
     }
 
-    handleChange = (event) => {
-        this.setState({value: event.target.value});
+    handleChange = (e) => {
+        this.setState({value: e.target.value});
     }
 
-    handleSubmit = (event) => {
-        alert('Выебри хрень: ' + this.state.value);
-        event.preventDefault();
+    handleSubmit = (e) => {
+        alert('Выбери фрукт: ' + this.state.value);
+        e.preventDefault();
     }
 
     render () {
@@ -25,7 +25,7 @@ class Header extends React.Component{
                 <div>
                     <form className="form" onSubmit={this.handleSubmit}>
                         <label>
-                            Выбери хрень:
+                            Выбери фрукт:
                             <select value={this.state.value} onChange={this.handleChange}>
                                 <option value="grapefruit">Grapefruit</option>
                                 <option value="lime">Lime</option>
