@@ -9,9 +9,10 @@ class App extends React.Component {
         value: 'coconut' // почему-то нельзя тут двойный кавычки :)
     }
 
-    handleChange = (e) => {
-        this.setState({value: e.target.value});
+    changeValue = () => {
+        this.setState({value: });
     }
+
 
     handleSubmit = (e) => {
         alert('Выбери фрукт, пожалуйста: ' + this.state.value);
@@ -23,8 +24,8 @@ class App extends React.Component {
 
             <div>
                 <Header
-                    value={this.state}
-                    onChangeValue={this.handleChange}
+                    selectedValue={this.state}
+                    onChangeValue={this.changeValue}
                     onSubmit={this.handleSubmit}/>
                 <Heading />
 
