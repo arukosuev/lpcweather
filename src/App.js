@@ -14,7 +14,7 @@ class App extends React.Component {
     }
 
     handleSubmit = (e) => {
-        alert('Выбери фрукт: ' + this.state.value);
+        alert('Выбери фрукт, пожалуйста: ' + this.state.value);
         e.preventDefault();
     }
 
