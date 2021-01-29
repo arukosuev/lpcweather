@@ -5,11 +5,27 @@ import City from "./components/city";
 
 class App extends React.Component {
 
+    state = {
+        value: 'coconut' // почему-то нельзя тут двойный кавычки :)
+    }
+
+    handleChange = (e) => {
+        this.setState({value: e.target.value});
+    }
+
+    handleSubmit = (e) => {
+        alert('Выбери фрукт: ' + this.state.value);
+        e.preventDefault();
+    }
+
     render() {
         return (
 
             <div>
-                <Header />
+                <Header
+                    value={this.state}
+                    onChangeValue={this.handleChange}
+                    onSubmit={this.handleSubmit}/>
                 <Heading />
 
                 <div className="africa">
