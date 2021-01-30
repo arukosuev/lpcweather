@@ -93,23 +93,23 @@ class City extends React.Component {
             switch (true) {
 
                 case (rainSum >= 25):
-                    return " rain__blue3";
+                    return " rain__blue4";
                     break;
 
                 case (rainSum >= 15):
-                    return " rain__blue2";
+                    return " rain__blue3";
                     break;
 
                 case (rainSum >= 4):
-                    return " rain__blue1";
+                    return " rain__blue2";
                     break;
 
                 case (rainSum >= 1.5):
-                    return " rain__blue0";
+                    return " rain__blue1";
                     break;
 
                 case (rainSum >= 0.3):
-                    return " block__red0";
+                    return " rain__blue0";
                     break;
 
                 case (rainSum >= 0):
@@ -243,7 +243,7 @@ class City extends React.Component {
             rain1: rainSum1,
             wind1: data.list[0].wind.speed.toFixed(1),
             clouds1: data.list[0].clouds.all,
-            visibility1: data.list[0].visibility/1000,
+            visibility1: (data.list[0].visibility/1000).toFixed(1),
             dirwind1: dirWindRus1,
             rainClassesName1: rainClassesDay1,
             tempClassesName1: temperatureClassesDay1,
@@ -253,7 +253,7 @@ class City extends React.Component {
             rain2: rainSum2,
             wind2: data.list[2].wind.speed.toFixed(1),
             clouds2: data.list[2].clouds.all,
-            visibility2: data.list[2].visibility/1000,
+            visibility2: (data.list[2].visibility/1000).toFixed(1),
             dirwind2: dirWindRus2,
             rainClassesName2: rainClassesDay2,
             tempClassesName2: temperatureClassesDay2,
@@ -263,7 +263,7 @@ class City extends React.Component {
             rain3: rainSum3,
             wind3: data.list[4].wind.speed.toFixed(1),
             clouds3: data.list[4].clouds.all,
-            visibility3: data.list[4].visibility/1000,
+            visibility3: (data.list[4].visibility/1000).toFixed(1),
             dirwind3: dirWindRus3,
             rainClassesName3: rainClassesDay3,
             tempClassesName3: temperatureClassesDay3,
@@ -273,7 +273,7 @@ class City extends React.Component {
             rain4: rainSum4,
             wind4: data.list[6].wind.speed.toFixed(1),
             clouds4: data.list[6].clouds.all,
-            visibility4: data.list[6].visibility/1000,
+            visibility4: (data.list[6].visibility/1000).toFixed(1),
             dirwind4: dirWindRus4,
             rainClassesName4: rainClassesDay4,
             tempClassesName4: temperatureClassesDay4,
@@ -283,7 +283,7 @@ class City extends React.Component {
             rain5: rainSum5,
             wind5: data.list[8].wind.speed.toFixed(1),
             clouds5: data.list[8].clouds.all,
-            visibility5: data.list[8].visibility/1000,
+            visibility5: (data.list[8].visibility/1000).toFixed(1),
             dirwind5: dirWindRus5,
             rainClassesName5: rainClassesDay5,
             tempClassesName5: temperatureClassesDay5,
@@ -293,7 +293,7 @@ class City extends React.Component {
             rain6: rainSum6,
             wind6: data.list[10].wind.speed.toFixed(1),
             clouds6: data.list[10].clouds.all,
-            visibility6: data.list[10].visibility/1000,
+            visibility6: (data.list[10].visibility/1000).toFixed(1),
             dirwind6: dirWindRus6,
             rainClassesName6: rainClassesDay6,
             tempClassesName6: temperatureClassesDay6,
@@ -303,7 +303,7 @@ class City extends React.Component {
             rain7: rainSum7,
             wind7: data.list[12].wind.speed.toFixed(1),
             clouds7: data.list[12].clouds.all,
-            visibility7: data.list[12].visibility/1000,
+            visibility7: (data.list[12].visibility/1000).toFixed(1),
             dirwind7: dirWindRus7,
             rainClassesName7: rainClassesDay7,
             tempClassesName7: temperatureClassesDay7,
@@ -313,7 +313,7 @@ class City extends React.Component {
             rain8: rainSum8,
             wind8: data.list[14].wind.speed.toFixed(1),
             clouds8: data.list[14].clouds.all,
-            visibility8: data.list[14].visibility/1000,
+            visibility8: (data.list[14].visibility/1000).toFixed(1),
             dirwind8: dirWindRus8,
             rainClassesName8: rainClassesDay8,
             tempClassesName8: temperatureClassesDay8,
@@ -323,7 +323,7 @@ class City extends React.Component {
             rain9: rainSum9,
             wind9: data.list[16].wind.speed.toFixed(1),
             clouds9: data.list[16].clouds.all,
-            visibility9: data.list[16].visibility/1000,
+            visibility9: (data.list[16].visibility/1000).toFixed(1),
             dirwind9: dirWindRus9,
             rainClassesName9: rainClassesDay9,
             tempClassesName9: temperatureClassesDay9,
@@ -333,7 +333,7 @@ class City extends React.Component {
             rain10: rainSum10,
             wind10: data.list[18].wind.speed.toFixed(1),
             clouds10: data.list[18].clouds.all,
-            visibility10: data.list[18].visibility/1000,
+            visibility10: (data.list[18].visibility/1000).toFixed(1),
             dirwind10: dirWindRus10,
             rainClassesName10: rainClassesDay10,
             tempClassesName10: temperatureClassesDay10,
@@ -343,7 +343,7 @@ class City extends React.Component {
             rain11: rainSum11,
             wind11: data.list[20].wind.speed.toFixed(1),
             clouds11: data.list[20].clouds.all,
-            visibility11: data.list[20].visibility/1000,
+            visibility11: (data.list[20].visibility/1000).toFixed(1),
             dirwind11: dirWindRus11,
             rainClassesName11: rainClassesDay11,
             tempClassesName11: temperatureClassesDay11,
@@ -353,7 +353,7 @@ class City extends React.Component {
             rain12: rainSum12,
             wind12: data.list[22].wind.speed.toFixed(1),
             clouds12: data.list[22].clouds.all,
-            visibility12: data.list[22].visibility/1000,
+            visibility12: (data.list[22].visibility/1000).toFixed(1),
             dirwind12: dirWindRus12,
             rainClassesName12: rainClassesDay12,
             tempClassesName12: temperatureClassesDay12,
@@ -363,7 +363,7 @@ class City extends React.Component {
             rain13: rainSum13,
             wind13: data.list[24].wind.speed.toFixed(1),
             clouds13: data.list[24].clouds.all,
-            visibility13: data.list[24].visibility/1000,
+            visibility13: (data.list[24].visibility/1000).toFixed(1),
             dirwind13: dirWindRus13,
             rainClassesName13: rainClassesDay13,
             tempClassesName13: temperatureClassesDay13,
@@ -373,7 +373,7 @@ class City extends React.Component {
             rain14: rainSum14,
             wind14: data.list[26].wind.speed.toFixed(1),
             clouds14: data.list[26].clouds.all,
-            visibility14: data.list[26].visibility/1000,
+            visibility14: (data.list[26].visibility/1000).toFixed(1),
             dirwind14: dirWindRus14,
             rainClassesName14: rainClassesDay14,
             tempClassesName14: temperatureClassesDay14,
@@ -383,7 +383,7 @@ class City extends React.Component {
             rain15: rainSum15,
             wind15: data.list[28].wind.speed.toFixed(1),
             clouds15: data.list[28].clouds.all,
-            visibility15: data.list[28].visibility/1000,
+            visibility15: (data.list[28].visibility/1000).toFixed(1),
             dirwind15: dirWindRus15,
             rainClassesName15: rainClassesDay15,
             tempClassesName15: temperatureClassesDay15,
@@ -393,7 +393,7 @@ class City extends React.Component {
             rain16: rainSum16,
             wind16: data.list[30].wind.speed.toFixed(1),
             clouds16: data.list[30].clouds.all,
-            visibility16: data.list[30].visibility/1000,
+            visibility16: (data.list[30].visibility/1000).toFixed(1),
             dirwind16: dirWindRus16,
             rainClassesName16: rainClassesDay16,
             tempClassesName16: temperatureClassesDay16,
@@ -403,7 +403,7 @@ class City extends React.Component {
             rain17: rainSum17,
             wind17: data.list[32].wind.speed.toFixed(1),
             clouds17: data.list[32].clouds.all,
-            visibility17: data.list[32].visibility/1000,
+            visibility17: (data.list[32].visibility/1000).toFixed(1),
             dirwind17: dirWindRus17,
             rainClassesName17: rainClassesDay17,
             tempClassesName17: temperatureClassesDay17,
@@ -413,7 +413,7 @@ class City extends React.Component {
             rain18: rainSum18,
             wind18: data.list[34].wind.speed.toFixed(1),
             clouds18: data.list[34].clouds.all,
-            visibility18: data.list[34].visibility/1000,
+            visibility18: (data.list[34].visibility/1000).toFixed(1),
             dirwind18: dirWindRus18,
             rainClassesName18: rainClassesDay18,
             tempClassesName18: temperatureClassesDay18,
@@ -423,7 +423,7 @@ class City extends React.Component {
             rain19: rainSum19,
             wind19: data.list[36].wind.speed.toFixed(1),
             clouds19: data.list[36].clouds.all,
-            visibility19: data.list[36].visibility/1000,
+            visibility19: (data.list[36].visibility/1000).toFixed(1),
             dirwind19: dirWindRus19,
             rainClassesName19: rainClassesDay19,
             tempClassesName19: temperatureClassesDay19,
@@ -433,7 +433,7 @@ class City extends React.Component {
             rain20: rainSum20,
             wind20: data.list[38].wind.speed.toFixed(1),
             clouds20: data.list[38].clouds.all,
-            visibility20: data.list[38].visibility/1000,
+            visibility20: (data.list[38].visibility/1000).toFixed(1),
             dirwind20: dirWindRus20,
             rainClassesName20: rainClassesDay20,
             tempClassesName20: temperatureClassesDay20,

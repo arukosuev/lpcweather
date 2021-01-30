@@ -9,11 +9,11 @@ class Header extends Component{
 
     render () {
         return (
-            <div className="container">
-                <div className="header">
+            <div className="main-header">
+                <div className="container header">
                     <h2>Погода в нескольких городах</h2>
                 </div>
-                <div>
+                <div className="container">
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
                             Выбери регион:

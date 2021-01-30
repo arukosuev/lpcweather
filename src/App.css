@@ -20,6 +20,9 @@ p {
     background-color: gainsboro;
     align-items: center;
     justify-content: center;
+
+    position: sticky;
+    top: 0;
 }
 
 .city, .indicators {

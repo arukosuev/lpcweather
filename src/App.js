@@ -64,36 +64,39 @@ class App extends React.Component {
     render() {
         return (
 
-            <div>
+            <div className="app">
                 <Header
                     selectedValue={this.state}
                     onChangeValue={this.changeValue}
                     onSubmit={this.handleSubmit}/>
-                <Heading />
+                <div className="table">
+                    <Heading />
 
-                <div className={this.state.africaClasses}>
-                    <City owmCity="Dubai" />
-                    <City owmCity="Algiers" />
+                    <div className={this.state.africaClasses}>
+                        <City owmCity="Dubai" />
+                        <City owmCity="Algiers" />
+                    </div>
+
+                    <div className={this.state.europeClasses}>
+                        <City owmCity="Stockholm" />
+                        <City owmCity="Madrid" />
+                    </div>
+
+                    <div className={this.state.russiaClasses}>
+                        <City owmCity="Sochi" />
+                        <City owmCity="Krasnodar" />
+                        <City owmCity="Rostov-on-Don" />
+                        <City owmCity="Saint Petersburg" />
+                    </div>
+
+                    <div className={this.state.othersClasses}>
+                        <City owmCity="Singapore" />
+                        <City owmCity="San Paolo" />
+                        <City owmCity="Phuket" />
+                        <City owmCity="Singaraja" />
+                    </div>
                 </div>
 
-                <div className={this.state.europeClasses}>
-                    <City owmCity="Stockholm" />
-                    <City owmCity="Madrid" />
-                </div>
-
-                <div className={this.state.russiaClasses}>
-                    <City owmCity="Sochi" />
-                    <City owmCity="Krasnodar" />
-                    <City owmCity="Rostov-on-Don" />
-                    <City owmCity="Saint Petersburg" />
-                </div>
-
-                <div className={this.state.othersClasses}>
-                    <City owmCity="Singapore" />
-                    <City owmCity="San Paolo" />
-                    <City owmCity="Phuket" />
-                    <City owmCity="Singaraja" />
-                </div>
 
             </div>
         );
