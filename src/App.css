@@ -45,4 +45,8 @@ p {
     justify-content: center;
 }
 
+.invisible {
+    display: none;
+}
+
 

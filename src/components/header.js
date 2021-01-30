@@ -16,12 +16,13 @@ class Header extends Component{
                 <div>
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
-                            Выбери фрукт:
+                            Выбери регион:
                             <select onChange={this.handleChange}>
-                                <option value="grapefruit">Grapefruit</option>
-                                <option value="lime">Lime</option>
-                                <option value="coconut">Coconut</option>
-                                <option value="mango">Mango</option>
+                                <option value="all">All</option>
+                                <option value="africa">Africa</option>
+                                <option value="europe">Europe</option>
+                                <option value="russia">Russia</option>
+                                <option value="others">Others</option>
                             </select>
                         </label>
                         <input type="submit" value="Submit" />
