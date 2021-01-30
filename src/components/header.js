@@ -4,7 +4,7 @@ import classes from '../styles/header.scss';
 class Header extends Component{
 
     handleChange = (e) => {
-        this.onChangeValue(e.target.value);
+        this.props.onChangeValue(e.target.value);
     }
 
     render () {
@@ -17,7 +17,7 @@ class Header extends Component{
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
                             Выбери фрукт:
-                            <select value={this.props.selectedValue} onChange={this.handleChange}>
+                            <select onChange={this.handleChange}>
                                 <option value="grapefruit">Grapefruit</option>
                                 <option value="lime">Lime</option>
                                 <option value="coconut">Coconut</option>
@@ -31,8 +31,6 @@ class Header extends Component{
 
         );
     }
-
-
 }
 
 export default Header;

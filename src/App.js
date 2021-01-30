@@ -9,8 +9,8 @@ class App extends React.Component {
         value: 'coconut' // почему-то нельзя тут двойный кавычки :)
     }
 
-    changeValue = () => {
-        this.setState({value: });
+    changeValue = (selectedValue) => {
+        this.setState({value: selectedValue});
     }
 
 
@@ -43,6 +43,7 @@ class App extends React.Component {
                     <City owmCity="Sochi" />
                     <City owmCity="Krasnodar" />
                     <City owmCity="Rostov-on-Don" />
+                    <City owmCity="Saint Petersburg" />
                 </div>
 
                 <div className="others">
