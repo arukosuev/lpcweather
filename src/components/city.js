@@ -10,7 +10,7 @@ class City extends React.Component {
     gettingWeather = async () => {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
-        //console.log(data);
+        console.log(data);
 
         /* Create array will ALL fallouts value*/
         const getSumRain = (data, index) => {
@@ -27,21 +27,21 @@ class City extends React.Component {
         /* refactoring on switch-case */
         const directionWind = (degWind) => {
             if (degWind < 15 || degWind > 345) {
-                return "С";
+                return "↓";
             } else if (degWind >= 15 && degWind <= 75){
-                return "СВ";
+                return "↙";
             } else if (degWind > 75 && degWind < 105){
-                return "В";
+                return "←";
             } else if (degWind >= 105 && degWind <= 165){
-                return "ЮВ";
+                return "↖";
             } else if (degWind > 165 && degWind < 195){
-                return "Ю";
+                return "↑";
             } else if (degWind >= 195 && degWind <= 255){
-                return "ЮЗ";
+                return "↗";
             } else if (degWind > 255 && degWind < 285) {
-                return "З";
+                return "→";
             } else if (degWind >= 285 && degWind <= 345) {
-                return "СЗ";
+                return "↘";
             }
         }
 
@@ -443,7 +443,7 @@ class City extends React.Component {
     }
 
     componentDidMount() {
-        this.gettingWeather();
+        setInterval(this.gettingWeather(),3600000);
     }
 
     render() {
