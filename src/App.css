@@ -52,4 +52,8 @@ p {
     display: none;
 }
 
+.form__label {
+    font-size: 12px;
+}
+
 

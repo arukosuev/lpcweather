@@ -16,7 +16,7 @@ class Header extends Component{
                 <div className="container">
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
-                            Выбери регион:
+                            <span className="form__label">Выбери регион: </span>
                             <select onChange={this.handleChange}>
                                 <option value="all">All</option>
                                 <option value="africa">Africa</option>
@@ -25,7 +25,7 @@ class Header extends Component{
                                 <option value="others">Others</option>
                             </select>
                         </label>
-                        <input type="submit" value="Submit" />
+                        <input type="submit" value="Выбрать" />
                     </form>
                 </div>
             </div>
