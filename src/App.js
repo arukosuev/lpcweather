@@ -57,7 +57,6 @@ class App extends React.Component {
             });
         }
 
-        //alert('Выбери регион ' + this.state.value);
         e.preventDefault();
     }
 

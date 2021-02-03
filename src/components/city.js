@@ -10,7 +10,7 @@ class City extends React.Component {
     gettingWeather = async () => {
         const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
 
         /* Create array will ALL fallouts value*/
         const getSumRain = (data, index) => {
@@ -440,10 +440,13 @@ class City extends React.Component {
             windClassesName20: windClassesDay20,
 
         });
+
+        console.log(new Date);
     }
 
     componentDidMount() {
-        setInterval(this.gettingWeather(),3600000);
+        this.interval = setInterval(() => this.gettingWeather(), 30000);
+
     }
 
     render() {

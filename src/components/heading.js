@@ -46,10 +46,13 @@ class Heading extends React.Component {
             time19:timeConverter(data.list[36].dt),
             time20:timeConverter(data.list[38].dt),
         });
+
+        console.log(new Date);
     }
 
     componentDidMount() {
-        this.gettingTimeForWeather();
+        this.interval = setInterval(() => this.gettingTimeForWeather(), 30000);
+
     }
 
     render () {
