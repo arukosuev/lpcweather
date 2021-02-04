@@ -444,9 +444,13 @@ class City extends React.Component {
         console.log(new Date);
     }
 
-    componentDidMount() {
-        this.interval = setInterval(() => this.gettingWeather(), 30000);
+    componentWillMount() {
+        console.log('Will Mount');
+        this.gettingWeather();
+    }
 
+    componentDidMount() {
+        setInterval(() => this.gettingWeather(), 140000);
     }
 
     render() {
