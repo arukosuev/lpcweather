@@ -57,3 +57,7 @@ Cheremushki
 Nizhneusinskoye
 Ust’-usa
 
+let cities = ['Baykit','Tura','Turukhansk','Bor','Severo-Yeniseyskiy','Yeniseysk','Strelka','Motygino'
+    ,'Vanavara','Yerbogachen','Kodinsk','Manzya','Boguchany','Chunoyar','Achinsk','Bogotol','Kazachinskoye','Novobirilyussy','Pirovskoye','Dzerzhinskoe','Taseyevo','Aban',
+    'Kansk','Uzhur','Sharypovo','Balakhta','Yemel\'yanovo','Krasnoyarsk','Sukhobuzimskoye','Beret\'','Shalinskoye','Aginskoye','Irbeyskoye','Uyar','Artyomovsk','Idrinskoye','Kuragino',
+    'Krasnoturansk','Minusinsk','Yermakovskoye','Karatuzskoye','Cheremushki','Turan'];
