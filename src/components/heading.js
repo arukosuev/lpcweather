@@ -55,7 +55,7 @@ class Heading extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(() => this.gettingTimeForWeather(), 140000);
+        setInterval(() => this.gettingTimeForWeather(), 180000);
     }
 
     render () {

@@ -4,7 +4,10 @@ import Heading from "./components/heading";
 import City from "./components/city";
 
 
-const cities = ["Dubai", "Algiers"];
+const africaCities = ["Dubai", "Algiers", "Wau", "Rundu", "Cape Town", "Nairobi", "Manakara", "Pemba", "Mombasa", "Singa"];
+const europeCities = ["Stockholm", "Madrid", "Berlin", "Paris", "Istanbul", "Riga", "London", "Luxembourg", "Milan", "Athens"];
+const russiaCities = ["Sochi", "Krasnodar", "Rostov-on-Don", "Saint Petersburg", "Krasnoyarsk", "Voronezh", "Novosibirsk", "Vladivostok", "Norilsk", "Moscow"];
+const othersCities = ["Singapore", "San Paolo", "Phuket", "Singaraja", "Canberra", "Tual", "Pekin", "Hong Kong", "Colombo", "Karachi"];
 
 
 class App extends React.Component {
@@ -76,27 +79,55 @@ class App extends React.Component {
                     <Heading />
 
                     <div className={this.state.africaClasses}>
-                        <City owmCity={cities[0]} />
-                        <City owmCity={cities[1]} />
+                        <City owmCity={africaCities[0]} />
+                        <City owmCity={africaCities[1]} />
+                        <City owmCity={africaCities[2]} />
+                        <City owmCity={africaCities[3]} />
+                        <City owmCity={africaCities[4]} />
+                        <City owmCity={africaCities[5]} />
+                        <City owmCity={africaCities[6]} />
+                        <City owmCity={africaCities[7]} />
+                        <City owmCity={africaCities[8]} />
+                        <City owmCity={africaCities[9]} />
                     </div>
 
                     <div className={this.state.europeClasses}>
-                        <City owmCity="Stockholm" />
-                        <City owmCity="Madrid" />
+                        <City owmCity={europeCities[0]} />
+                        <City owmCity={europeCities[1]} />
+                        <City owmCity={europeCities[2]} />
+                        <City owmCity={europeCities[3]} />
+                        <City owmCity={europeCities[4]} />
+                        <City owmCity={europeCities[5]} />
+                        <City owmCity={europeCities[6]} />
+                        <City owmCity={europeCities[7]} />
+                        <City owmCity={europeCities[8]} />
+                        <City owmCity={europeCities[9]} />
                     </div>
 
                     <div className={this.state.russiaClasses}>
-                        <City owmCity="Sochi" />
-                        <City owmCity="Krasnodar" />
-                        <City owmCity="Rostov-on-Don" />
-                        <City owmCity="Saint Petersburg" />
+                        <City owmCity={russiaCities[0]} />
+                        <City owmCity={russiaCities[1]} />
+                        <City owmCity={russiaCities[2]} />
+                        <City owmCity={russiaCities[3]} />
+                        <City owmCity={russiaCities[4]} />
+                        <City owmCity={russiaCities[5]} />
+                        <City owmCity={russiaCities[6]} />
+                        <City owmCity={russiaCities[7]} />
+                        <City owmCity={russiaCities[8]} />
+                        <City owmCity={russiaCities[9]} />
                     </div>
 
                     <div className={this.state.othersClasses}>
-                        <City owmCity="Singapore" />
-                        <City owmCity="San Paolo" />
-                        <City owmCity="Phuket" />
-                        <City owmCity="Singaraja" />
+                        <City owmCity={othersCities[0]} />
+                        <City owmCity={othersCities[1]} />
+                        <City owmCity={othersCities[2]} />
+                        <City owmCity={othersCities[3]} />
+                        <City owmCity={othersCities[4]} />
+                        <City owmCity={othersCities[5]} />
+                        <City owmCity={othersCities[6]} />
+                        <City owmCity={othersCities[7]} />
+                        <City owmCity={othersCities[8]} />
+                        <City owmCity={othersCities[9]} />
                     </div>
                 </div>
 
