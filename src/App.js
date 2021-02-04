@@ -3,6 +3,10 @@ import Header from "./components/header";
 import Heading from "./components/heading";
 import City from "./components/city";
 
+
+const cities = ["Dubai", "Algiers"];
+
+
 class App extends React.Component {
 
     state = {
@@ -72,8 +76,8 @@ class App extends React.Component {
                     <Heading />
 
                     <div className={this.state.africaClasses}>
-                        <City owmCity="Dubai" />
-                        <City owmCity="Algiers" />
+                        <City owmCity={cities[0]} />
+                        <City owmCity={cities[1]} />
                     </div>
 
                     <div className={this.state.europeClasses}>

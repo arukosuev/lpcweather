@@ -39,7 +39,7 @@ Kansk
 --
 Balakhta
 Kacha/ Emelyanovo
-Krasnoyarsk
+Krasnoyarsk  (lat":56.0097,"lon":92.7917)
 Suhobuzimo
 ---
 Anastasino
