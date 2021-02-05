@@ -2,22 +2,18 @@ import React from "react";
 import Header from "./components/header";
 import Heading from "./components/heading";
 import City from "./components/city";
-
-
-const africaCities = ["Dubai", "Algiers", "Wau", "Rundu", "Cape Town", "Nairobi", "Manakara", "Pemba", "Mombasa", "Singa"];
-const europeCities = ["Stockholm", "Madrid", "Berlin", "Paris", "Istanbul", "Riga", "London", "Luxembourg", "Milan", "Athens"];
-const russiaCities = ["Sochi", "Krasnodar", "Rostov-on-Don", "Saint Petersburg", "Krasnoyarsk", "Voronezh", "Novosibirsk", "Vladivostok", "Norilsk", "Moscow"];
-const othersCities = ["Singapore", "San Paolo", "Phuket", "Singaraja", "Canberra", "Tual", "Pekin", "Hong Kong", "Colombo", "Karachi"];
+import {cities} from "./configs/citiesList";
 
 
 class App extends React.Component {
 
     state = {
         value: "all",
-        africaClasses: "africa",
-        europeClasses: "europe",
-        russiaClasses: "russia",
-        othersClasses: "others",
+        boguchanyClasses: "boguchany",
+        yeniseyskClasses: "yeniseysk",
+        centerClasses: "center",
+        southClasses: "south",
+        evenkiyaClasses: "evenkiya"
     }
 
     changeValue = (selectedValue) => {
@@ -27,40 +23,53 @@ class App extends React.Component {
 
     handleSubmit = (e) => {
 
-        if (this.state.value === "africa") {
+        if (this.state.value === "boguchany") {
             this.setState( {
-                africaClasses: "africa",
-                europeClasses: "europe invisible",
-                russiaClasses: "russia invisible",
-                othersClasses: "others invisible",
+                boguchanyClasses: "boguchany",
+                yeniseyskClasses: "yeniseysk invisible",
+                centerClasses: "center invisible",
+                southClasses: "south invisible",
+                evenkiyaClasses: "evenkiya invisible",
             });
-        } else if (this.state.value === "europe") {
+        } else if (this.state.value === "yeniseysk") {
             this.setState( {
-                europeClasses: "europe",
-                africaClasses: "africa invisible",
-                russiaClasses: "russia invisible",
-                othersClasses: "others invisible",
+                yeniseyskClasses: "yeniseysk",
+                boguchanyClasses: "boguchany invisible",
+                centerClasses: "center invisible",
+                southClasses: "south invisible",
+                evenkiyaClasses: "evenkiya invisible",
             });
-        } else if (this.state.value === "russia") {
+        } else if (this.state.value === "center") {
             this.setState( {
-                russiaClasses: "russia",
-                africaClasses: "africa invisible",
-                europeClasses: "europe invisible",
-                othersClasses: "others invisible",
+                centerClasses: "center",
+                boguchanyClasses: "boguchany invisible",
+                yeniseyskClasses: "yeniseysk invisible",
+                southClasses: "south invisible",
+                evenkiyaClasses: "evenkiya invisible",
             });
-        } else if (this.state.value === "others") {
+        } else if (this.state.value === "south") {
+            this.setState({
+                southClasses: "south",
+                boguchanyClasses: "boguchany invisible",
+                centerClasses: "center invisible",
+                yeniseyskClasses: "yeniseysk invisible",
+                evenkiyaClasses: "evenkiya invisible",
+            });
+        } else if (this.state.value === "evenkiya") {
             this.setState( {
-                othersClasses: "others",
-                africaClasses: "africa invisible",
-                russiaClasses: "russia invisible",
-                europeClasses: "europe invisible",
+                southClasses: "south invisible",
+                boguchanyClasses: "boguchany invisible",
+                centerClasses: "center invisible",
+                yeniseyskClasses: "yeniseysk invisible",
+                evenkiyaClasses: "evenkiya",
             });
         } else if (this.state.value === "all") {
             this.setState( {
-                othersClasses: "others",
-                africaClasses: "africa",
-                russiaClasses: "russia",
-                europeClasses: "europe",
+                southClasses: "south",
+                boguchanyClasses: "boguchany",
+                centerClasses: "center",
+                yeniseyskClasses: "yeniseysk",
+                evenkiyaClasses: "evenkiya",
             });
         }
 
@@ -78,56 +87,119 @@ class App extends React.Component {
                 <div className="table">
                     <Heading />
 
-                    <div className={this.state.africaClasses}>
-                        <City owmCity={africaCities[0]} />
-                        <City owmCity={africaCities[1]} />
-                        <City owmCity={africaCities[2]} />
-                        <City owmCity={africaCities[3]} />
-                        <City owmCity={africaCities[4]} />
-                        <City owmCity={africaCities[5]} />
-                        <City owmCity={africaCities[6]} />
-                        <City owmCity={africaCities[7]} />
-                        <City owmCity={africaCities[8]} />
-                        <City owmCity={africaCities[9]} />
+                    <div className={this.state.boguchanyClasses}>
+                        <City
+                            cityName={cities[0].name}
+                            lat={cities[0].lat}
+                            lon={cities[0].lon}/>
+                        <City
+                            cityName={cities[1].name}
+                            lat={cities[1].lat}
+                            lon={cities[1].lon}/>
+                        <City
+                            cityName={cities[2].name}
+                            lat={cities[2].lat}
+                            lon={cities[2].lon}/>
+                        <City
+                            cityName={cities[3].name}
+                            lat={cities[3].lat}
+                            lon={cities[3].lon}/>
+
                     </div>
 
-                    <div className={this.state.europeClasses}>
-                        <City owmCity={europeCities[0]} />
-                        <City owmCity={europeCities[1]} />
-                        <City owmCity={europeCities[2]} />
-                        <City owmCity={europeCities[3]} />
-                        <City owmCity={europeCities[4]} />
-                        <City owmCity={europeCities[5]} />
-                        <City owmCity={europeCities[6]} />
-                        <City owmCity={europeCities[7]} />
-                        <City owmCity={europeCities[8]} />
-                        <City owmCity={europeCities[9]} />
+                    <div className={this.state.yeniseyskClasses}>
+                        <City
+                            cityName={cities[4].name}
+                            lat={cities[4].lat}
+                            lon={cities[4].lon}/>
+                        <City
+                            cityName={cities[5].name}
+                            lat={cities[5].lat}
+                            lon={cities[5].lon}/>
+                        <City
+                            cityName={cities[6].name}
+                            lat={cities[6].lat}
+                            lon={cities[6].lon}/>
+                        <City
+                            cityName={cities[7].name}
+                            lat={cities[7].lat}
+                            lon={cities[7].lon}/>
+                        <City
+                            cityName={cities[8].name}
+                            lat={cities[8].lat}
+                            lon={cities[8].lon}/>
+                        <City
+                            cityName={cities[9].name}
+                            lat={cities[9].lat}
+                            lon={cities[9].lon}/>
+                        <City
+                            cityName={cities[10].name}
+                            lat={cities[10].lat}
+                            lon={cities[10].lon}/>
+                        <City
+                            cityName={cities[11].name}
+                            lat={cities[11].lat}
+                            lon={cities[11].lon}/>
+                        <City
+                            cityName={cities[12].name}
+                            lat={cities[12].lat}
+                            lon={cities[12].lon}/>
+                        <City
+                            cityName={cities[13].name}
+                            lat={cities[13].lat}
+                            lon={cities[13].lon}/>
+                        <City
+                            cityName={cities[14].name}
+                            lat={cities[14].lat}
+                            lon={cities[14].lon}/>
+                        <City
+                            cityName={cities[15].name}
+                            lat={cities[15].lat}
+                            lon={cities[15].lon}/>
+                        <City
+                            cityName={cities[16].name}
+                            lat={cities[16].lat}
+                            lon={cities[16].lon}/>
+                        <City
+                            cityName={cities[17].name}
+                            lat={cities[17].lat}
+                            lon={cities[17].lon}/>
+                        <City
+                            cityName={cities[18].name}
+                            lat={cities[18].lat}
+                            lon={cities[18].lon}/>
+                        <City
+                            cityName={cities[19].name}
+                            lat={cities[19].lat}
+                            lon={cities[19].lon}/>
+                        <City
+                            cityName={cities[20].name}
+                            lat={cities[20].lat}
+                            lon={cities[20].lon}/>
+                        <City
+                            cityName={cities[21].name}
+                            lat={cities[21].lat}
+                            lon={cities[21].lon}/>
+
                     </div>
 
-                    <div className={this.state.russiaClasses}>
-                        <City owmCity={russiaCities[0]} />
-                        <City owmCity={russiaCities[1]} />
-                        <City owmCity={russiaCities[2]} />
-                        <City owmCity={russiaCities[3]} />
-                        <City owmCity={russiaCities[4]} />
-                        <City owmCity={russiaCities[5]} />
-                        <City owmCity={russiaCities[6]} />
-                        <City owmCity={russiaCities[7]} />
-                        <City owmCity={russiaCities[8]} />
-                        <City owmCity={russiaCities[9]} />
+                    <div className={this.state.centerClasses}>
+                        <City
+                            cityName={cities[22].name}
+                            lat={cities[22].lat}
+                            lon={cities[22].lon}/>
+                        <City
+                            cityName={cities[23].name}
+                            lat={cities[23].lat}
+                            lon={cities[23].lon}/>
                     </div>
 
-                    <div className={this.state.othersClasses}>
-                        <City owmCity={othersCities[0]} />
-                        <City owmCity={othersCities[1]} />
-                        <City owmCity={othersCities[2]} />
-                        <City owmCity={othersCities[3]} />
-                        <City owmCity={othersCities[4]} />
-                        <City owmCity={othersCities[5]} />
-                        <City owmCity={othersCities[6]} />
-                        <City owmCity={othersCities[7]} />
-                        <City owmCity={othersCities[8]} />
-                        <City owmCity={othersCities[9]} />
+                    <div className={this.state.southClasses}>
+
+                    </div>
+
+                    <div className={this.state.evenkiyaClasses}>
+
                     </div>
                 </div>
 

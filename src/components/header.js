@@ -18,11 +18,12 @@ class Header extends Component{
                         <label>
                             <span className="form__label">Выбери регион: </span>
                             <select onChange={this.handleChange}>
-                                <option value="all">All</option>
-                                <option value="africa">Africa</option>
-                                <option value="europe">Europe</option>
-                                <option value="russia">Russia</option>
-                                <option value="others">Others</option>
+                                <option value="all">Все</option>
+                                <option value="evenkiya">Эвенкийское звено</option>
+                                <option value="yeniseysk">Енисейское звено</option>
+                                <option value="boguchany">Кежемско-Богучанское звено</option>
+                                <option value="center">Центральное звено</option>
+                                <option value="south">Южное звено</option>
                             </select>
                         </label>
                         <input type="submit" value="Выбрать" />

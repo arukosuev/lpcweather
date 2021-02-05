@@ -8,7 +8,7 @@ class City extends React.Component {
     state = {}
 
     gettingWeather = async () => {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.owmCity}&appid=${API_KEY}&units=metric`);
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${this.props.lat}&lon=${this.props.lon}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
         //console.log(data);
 
@@ -462,7 +462,7 @@ class City extends React.Component {
 
                 <div className="days container">
                     <div className="city">
-                        <p>{this.state.city}</p>
+                        <p>{this.props.cityName}</p>
                     </div>
 
                     <div className="indicators">
