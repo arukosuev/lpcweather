@@ -13,10 +13,10 @@ class Header extends Component{
                 <div className="header">
                     <h2>Погода в Красноярском крае</h2>
                 </div>
-                <div className="from__block">
+                <div className="form__block">
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
-                            <span className="form__label">Выбери регион: </span>
+                            <span className="form__label">Район:&nbsp;&nbsp;</span>
                             <select onChange={this.handleChange}>
                                 <option value="all">Все</option>
                                 <option value="evenkiya">Эвенкийское звено</option>

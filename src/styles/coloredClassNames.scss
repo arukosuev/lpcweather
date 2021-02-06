@@ -15,8 +15,6 @@
   background-color: #d4f6f8;
 }
 
-
-
 /*classes for coloring blocks: wind , temp*/
 .block__red3 {
   background-color: #fa1c1c;
@@ -32,6 +30,10 @@
 }
 
 /*classes for coloring cities sections*/
-.days .yeniseysk {
-  background-color: cafcca; // does not work
+.evenkiya .days, .boguchany .days, .south .days {
+  background-color: white;
+}
+
+.yeniseysk .days, .center .days {
+  background-color: whitesmoke;
 }
