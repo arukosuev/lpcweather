@@ -1,4 +1,4 @@
-import React, {Fragment, Component} from "react";
+import React, {Component} from "react";
 import classes from '../styles/header.scss';
 
 class Header extends Component{
@@ -9,11 +9,11 @@ class Header extends Component{
 
     render () {
         return (
-            <div className="main-header">
-                <div className="container header">
-                    <h2>Погода в нескольких городах</h2>
+            <div className="main-header container">
+                <div className="header">
+                    <h2>Погода в Красноярском крае</h2>
                 </div>
-                <div className="container">
+                <div className="from__block">
                     <form className="form" onSubmit={this.props.onSubmit}>
                         <label>
                             <span className="form__label">Выбери регион: </span>
@@ -29,6 +29,12 @@ class Header extends Component{
                         <input type="submit" value="Выбрать" />
                     </form>
                 </div>
+
+                <span className="support">
+                    <p>По всем вопросам:&nbsp;&nbsp;</p>
+                    <a className="support__link" href="mailto:artyom.rukosuev@gmail.com">artyom.rukosuev@gmail.com</a>
+                </span>
+
             </div>
 
         );

@@ -20,13 +20,16 @@ p {
     background-color: gainsboro;
     align-items: center;
     justify-content: center;
+    outline: 1px solid darkgrey;
 
     position: sticky;
     top: 0;
 }
 
 .city, .indicators {
-    width: 75px;
+    width: 90px;
+    margin: 0;
+    padding: 0;
 }
 
 .days {
@@ -54,6 +57,10 @@ p {
 
 .form__label {
     font-size: 12px;
+}
+
+.table {
+    margin-bottom: 10px;
 }
 
 

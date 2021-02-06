@@ -1,11 +1,36 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header {
-  height: 35px;
+  margin: 0;
 }
 
 h2 {
+  padding-left: 20px;
 }
 
 .form {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+
+.support, .support__link {
+    color: darkgrey;
+}
+
+.support__link {
+  padding-top: 2px;
+}
+
+.support {
+  display: flex;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.support__link:hover {
+  color: dimgrey;
 }
