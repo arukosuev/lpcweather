@@ -26,7 +26,7 @@ class Header extends Component{
                                 <option value="south">Южное звено</option>
                             </select>
                         </label>
-                        <input type="submit" value="Выбрать" />
+                        <input className="form__button" type="submit" value="Выбрать" />
                     </form>
                 </div>
 

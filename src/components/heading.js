@@ -68,7 +68,7 @@ class Heading extends React.Component {
                         <p>Город</p>
                     </div>
                     <div className="indicators">
-                        <p>Локальное время</p>
+                        <p>Локал.время</p>
                     </div>
                     <div className="day">
                         <p className="time">{this.state.time1}</p>
