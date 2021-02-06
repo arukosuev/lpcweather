@@ -454,7 +454,7 @@ class City extends React.Component {
             wind11: data.list[11].wind.speed.toFixed(1),
             clouds11: data.list[11].clouds.all,
             visibility11: (data.list[11].visibility/1000).toFixed(1),
-            dirwind11: dirWindRus1,
+            dirwind11: dirWindRus11,
             rainClassesName11: rainClassesDay11,
             tempClassesName11: temperatureClassesDay11,
             windClassesName11: windClassesDay11,
@@ -534,7 +534,7 @@ class City extends React.Component {
             wind19: data.list[19].wind.speed.toFixed(1),
             clouds19: data.list[19].clouds.all,
             visibility19: (data.list[19].visibility/1000).toFixed(1),
-            dirwind9: dirWindRus19,
+            dirwind19: dirWindRus19,
             rainClassesName19: rainClassesDay19,
             tempClassesName19: temperatureClassesDay19,
             windClassesName19: windClassesDay19,
@@ -1023,13 +1023,14 @@ class City extends React.Component {
                         <p className="clouds">{this.state.clouds35}</p>
                         <p className="visibility">{this.state.visibility35}</p>
                         <p className={this.state.windClassesName35}>{this.state.wind35}, {this.state.dirwind35}</p>
-                    </div><div className="day">
-                    <p className={this.state.tempClassesName36}>{this.state.temp36}</p>
-                    <p className={this.state.rainClassesName36}>{this.state.rain36}</p>
-                    <p className="clouds">{this.state.clouds36}</p>
-                    <p className="visibility">{this.state.visibility36}</p>
-                    <p className={this.state.windClassesName36}>{this.state.wind36}, {this.state.dirwind36}</p>
-                </div>
+                    </div>
+                    <div className="day">
+                        <p className={this.state.tempClassesName36}>{this.state.temp36}</p>
+                        <p className={this.state.rainClassesName36}>{this.state.rain36}</p>
+                        <p className="clouds">{this.state.clouds36}</p>
+                        <p className="visibility">{this.state.visibility36}</p>
+                        <p className={this.state.windClassesName36}>{this.state.wind36}, {this.state.dirwind36}</p>
+                    </div>
                     <div className="day">
                         <p className={this.state.tempClassesName37}>{this.state.temp37}</p>
                         <p className={this.state.rainClassesName37}>{this.state.rain37}</p>
