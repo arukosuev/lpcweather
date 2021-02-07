@@ -1,7 +1,7 @@
 # Many cities weather app
 
-This is a small project aimed at improving weather forecasting in all of the Krasnoyarsk Territory.
-It can help fight forest fires. 🔥
+This is a small project aimed at improving weather forecasting in all of the Krasnoyarsk Territory.  
+It can help fight forest fires. 🚒🔥
 
 ### ⚙️Use `npm start` command to run app locally
 
