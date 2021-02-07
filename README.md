@@ -1,7 +1,7 @@
 # Many cities weather app
 
 This is a small project aimed at improving weather forecasting in all of the Krasnoyarsk Territory.
-It can help fight forest fires.
+It can help fight forest fires. 🔥
 
 ### ⚙️Use `npm start` command to run app locally
 
@@ -10,3 +10,7 @@ It can help fight forest fires.
 - Desktop First
 - bootstrapped with CRA
 - still coding...
+- need refactoring and debugging....
+
+### See the screenshot:
+![Image alt](https://github.com/arukosuev/lpcweather/raw/main/public/image.png)
