@@ -13,7 +13,7 @@ It can help fight forest fires. 🚒🔥
 - need refactoring and debugging....
 
 ### Click the demo:
-[Click the demo here](https://stark-tor-89840.herokuapp.com/)
+[>>> Click the demo here](https://stark-tor-89840.herokuapp.com/)
 
 ### See the screenshot:
 ![Image alt](https://github.com/arukosuev/lpcweather/raw/main/public/image.png)
