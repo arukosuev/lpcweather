@@ -9,11 +9,7 @@ It can help fight forest fires. 🚒🔥
 - SCSS/CSS3 
 - Desktop First
 - bootstrapped with CRA
-- still coding...
-- need refactoring and debugging....
+- CI/CD based on heroku
 
 ### Click the demo:
-[>>> Click the demo here](https://stark-tor-89840.herokuapp.com/)
-
-### See the screenshot:
-![Image alt](https://github.com/arukosuev/lpcweather/raw/main/public/image.png)
+[>> Click the demo here](https://lpcweather.herokuapp.com/)
