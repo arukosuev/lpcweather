@@ -8,7 +8,7 @@ class Heading extends React.Component {
     state={}
 
     gettingTimeForWeather = async () => {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${defaultCity}&appid=${API_KEY}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${defaultCity}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
 
         const timeConverter = (UNIX_timestamp) => {
