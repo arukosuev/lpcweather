@@ -12,4 +12,4 @@ It can help fight forest fires. 🚒🔥
 - CI/CD based on heroku
 
 ### Click the demo:
-[>> Click the demo here](https://lpcweather.herokuapp.com/)
+[>> Click the demo here](http://f90802m9.beget.tech/)
